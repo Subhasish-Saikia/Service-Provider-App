@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Provider Booking Schedule</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0684f9",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                        "foreground-light": "#0d151c",
+                        "foreground-dark": "#f5f7f8",
+                        "subtle-light": "#47749e",
+                        "subtle-dark": "#a1c2e0",
+                        "border-light": "#cedce9",
+                        "border-dark": "#2a3f53",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="p-2 -ml-2">
+<span class="material-symbols-outlined text-foreground-light dark:text-foreground-dark">arrow_back</span>
+</button>
+<h1 class="flex-1 text-lg font-bold text-center">Bookings</h1>
+<button class="p-2 -mr-2">
+<span class="material-symbols-outlined text-foreground-light dark:text-foreground-dark">calendar_today</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<div class="p-4 bg-white dark:bg-background-dark shadow-sm border-b border-border-light dark:border-border-dark">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold">April 2024</h2>
+<div class="flex items-center gap-2">
+<button class="p-1 rounded-full text-subtle-light dark:text-subtle-dark">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-1 rounded-full text-subtle-light dark:text-subtle-dark">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center text-sm font-semibold text-subtle-light dark:text-subtle-dark">
+<div class="w-10 h-10 flex items-center justify-center">S</div>
+<div class="w-10 h-10 flex items-center justify-center">M</div>
+<div class="w-10 h-10 flex items-center justify-center">T</div>
+<div class="w-10 h-10 flex items-center justify-center">W</div>
+<div class="w-10 h-10 flex items-center justify-center">T</div>
+<div class="w-10 h-10 flex items-center justify-center">F</div>
+<div class="w-10 h-10 flex items-center justify-center">S</div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center text-sm">
+<div class="w-10 h-10 flex items-center justify-center text-subtle-light dark:text-subtle-dark">31</div>
+<div class="w-10 h-10 flex items-center justify-center">1</div>
+<div class="w-10 h-10 flex items-center justify-center relative">
+<span class="z-10">2</span>
+<span class="absolute bottom-1.5 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<div class="w-10 h-10 flex items-center justify-center relative">
+<span class="z-10">3</span>
+<span class="absolute bottom-1.5 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<div class="w-10 h-10 flex items-center justify-center relative">
+<span class="z-10">4</span>
+<span class="absolute bottom-1.5 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<div class="w-10 h-10 flex items-center justify-center">5</div>
+<div class="w-10 h-10 flex items-center justify-center">6</div>
+<div class="w-10 h-10 flex items-center justify-center">7</div>
+<div class="w-10 h-10 flex items-center justify-center">8</div>
+<div class="w-10 h-10 flex items-center justify-center relative">
+<span class="z-10">9</span>
+<span class="absolute bottom-1.5 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<div class="w-10 h-10 flex items-center justify-center">10</div>
+<div class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full font-bold">11</div>
+<div class="w-10 h-10 flex items-center justify-center">12</div>
+<div class="w-10 h-10 flex items-center justify-center">13</div>
+<div class="w-10 h-10 flex items-center justify-center">14</div>
+<div class="w-10 h-10 flex items-center justify-center">15</div>
+<div class="w-10 h-10 flex items-center justify-center">16</div>
+<div class="w-10 h-10 flex items-center justify-center relative">
+<span class="z-10">17</span>
+<span class="absolute bottom-1.5 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<div class="w-10 h-10 flex items-center justify-center">18</div>
+<div class="w-10 h-10 flex items-center justify-center">19</div>
+<div class="w-10 h-10 flex items-center justify-center">20</div>
+<div class="w-10 h-10 flex items-center justify-center">21</div>
+<div class="w-10 h-10 flex items-center justify-center">22</div>
+<div class="w-10 h-10 flex items-center justify-center">23</div>
+<div class="w-10 h-10 flex items-center justify-center">24</div>
+<div class="w-10 h-10 flex items-center justify-center relative">
+<span class="z-10">25</span>
+<span class="absolute bottom-1.5 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<div class="w-10 h-10 flex items-center justify-center">26</div>
+<div class="w-10 h-10 flex items-center justify-center">27</div>
+<div class="w-10 h-10 flex items-center justify-center">28</div>
+<div class="w-10 h-10 flex items-center justify-center">29</div>
+<div class="w-10 h-10 flex items-center justify-center">30</div>
+<div class="w-10 h-10 flex items-center justify-center text-subtle-light dark:text-subtle-dark">1</div>
+</div>
+</div>
+<div class="p-4">
+<h2 class="text-xl font-bold mb-4">Bookings for April 11</h2>
+<div class="space-y-3">
+<div class="flex items-center gap-4 p-3 rounded-lg bg-white dark:bg-background-dark shadow-sm border border-border-light dark:border-border-dark">
+<div class="flex-shrink-0 w-14 h-14 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCemW0W6s9klXdr57WVvPq1u9VQ2-U70LQZLvVB8W0MGgy212Rm-3T3sRejUDtWvn3sQzvpxtLZB77ofTdJqoscbweKiY8LZY7CdNDOzO6EXCwHgkB7XXxAf5pFwZ5RkeZkpTeQ9IfpeKWnXY3iB3PkTdDLjZVrcoRNsHMQmngexDxWwntJXx52XT0An7cqXbnY_GnIngtCXkWJMIT3ZgfuIJgTQK_uCg1l5UQmEc3GqjV5L9ApezFoh1idD0I2mq_Q2pX_v8uoXdd1");'></div>
+<div class="flex-1">
+<p class="font-bold text-foreground-light dark:text-foreground-dark">Haircut</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">10:00 AM - 11:00 AM</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">with Eleanor Pena</p>
+</div>
+<button class="p-2">
+<span class="material-symbols-outlined text-subtle-light dark:text-subtle-dark">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-white dark:bg-background-dark shadow-sm border border-border-light dark:border-border-dark">
+<div class="flex-shrink-0 w-14 h-14 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAONTtzq-33z_vDTQXtJ8WS7ECJiAiMpm4GEsv6SCf-vr3zaTIcWlxHAuv3AeG3tlWebuEPXHedQLCsPusOt3_DkoJ7cD93IHKT0R07_anj1LsiWiHIqlYO6ce2Bg0ZEWNH1C_yGzl2pPGGYzK5FrHO6ALeyMFcBecGyyr6fttaIwh4zXAwcsBH6-VWcHTZBZe7I1-02EdwESXEft_rYkL0PF_0j4IJz6lJu0UqhyHZEyaAsv9oEK_cnB0nFvxxTKpymFOWcWDPtnrs");'></div>
+<div class="flex-1">
+<p class="font-bold text-foreground-light dark:text-foreground-dark">Manicure</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">1:00 PM - 2:00 PM</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">with Jenny Wilson</p>
+</div>
+<button class="p-2">
+<span class="material-symbols-outlined text-subtle-light dark:text-subtle-dark">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-white dark:bg-background-dark shadow-sm border border-border-light dark:border-border-dark">
+<div class="flex-shrink-0 w-14 h-14 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDk7rbQ96DNosjf-pKA8Zkdq-HbhT8WKtWr1htLUnT5NoVxZ5Mfbs5FuVUNvO1Gpnjhlv48Z9OmepMDzCTSufa17I5NraI2ZZjp2CqZMlb2Lnr-nQSqkrBLsEX4qoBT2UY7lQMEDvZfaJHS8DXIUpucgtFIp8x-9ZjfiZZaKFF3m5k96MRJDkrSgjn9eA5jkQGsNLNpZ9_jnno1w8dkWau3WKy5s90dXpeKnseaBVPYuGODvrY-kp7DP6mtnShCkZgwtZmAbsntEQoZ");'></div>
+<div class="flex-1">
+<p class="font-bold text-foreground-light dark:text-foreground-dark">Facial</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">3:00 PM - 4:00 PM</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">with Kristin Watson</p>
+</div>
+<button class="p-2">
+<span class="material-symbols-outlined text-subtle-light dark:text-subtle-dark">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm border-t border-border-light dark:border-border-dark">
+<div class="flex justify-around items-center p-2">
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark w-1/4" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-xs">Home</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary w-1/4" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<p class="text-xs font-bold">Bookings</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark w-1/4" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-xs">Profile</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark w-1/4" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-xs">Settings</p>
+</a>
+</div>
+</footer>
+</div>
+
+</body></html>

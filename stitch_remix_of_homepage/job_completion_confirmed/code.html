@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Completion Confirmed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-zinc-900 dark:text-zinc-100">
+<div class="flex flex-col min-h-screen">
+<header class="flex items-center p-4">
+<button class="text-zinc-900 dark:text-zinc-100">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+</header>
+<main class="flex flex-col items-center justify-center flex-grow px-4 text-center">
+<div class="flex items-center justify-center w-24 h-24 rounded-full bg-primary mb-6">
+<span class="material-symbols-outlined text-black" style="font-size: 48px;">check</span>
+</div>
+<h1 class="text-2xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">Job Completion Confirmed</h1>
+<p class="max-w-md text-zinc-600 dark:text-zinc-400 mb-8">The service has been successfully marked as complete. Thank you for your hard work!</p>
+<div class="w-full max-w-sm p-6 bg-white dark:bg-zinc-800 rounded-xl shadow-sm border border-zinc-200 dark:border-zinc-700">
+<h2 class="text-lg font-bold text-zinc-900 dark:text-zinc-50 mb-4 text-left">Summary</h2>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-3 border-b border-zinc-200 dark:border-zinc-700">
+<span class="text-sm text-zinc-500 dark:text-zinc-400">Service</span>
+<span class="font-medium text-zinc-900 dark:text-zinc-100">Plumbing Repair</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-zinc-200 dark:border-zinc-700">
+<span class="text-sm text-zinc-500 dark:text-zinc-400">Customer</span>
+<span class="font-medium text-zinc-900 dark:text-zinc-100">Ethan Carter</span>
+</div>
+<div class="flex justify-between items-center pt-3">
+<span class="text-sm text-zinc-500 dark:text-zinc-400">Date</span>
+<span class="font-medium text-zinc-900 dark:text-zinc-100">July 26, 2024</span>
+</div>
+</div>
+</div>
+</main>
+<footer class="p-4 space-y-3">
+<button class="w-full h-12 px-5 text-base font-bold rounded-lg bg-primary text-black">
+                View Earnings
+            </button>
+<button class="w-full h-12 px-5 text-base font-bold rounded-lg bg-primary/20 dark:bg-primary/30 text-zinc-900 dark:text-zinc-100">
+                Go to Dashboard
+            </button>
+<button class="w-full h-12 px-5 text-base font-medium text-zinc-600 dark:text-zinc-400">
+                Request Review
+            </button>
+</footer>
+</div>
+
+</body></html>

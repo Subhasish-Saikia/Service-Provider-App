@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta charset="utf-8"/>
+<title>Completed Booking Details</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope:wght@400;500;700;800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0684f9",
+            "background-light": "#f5f7f8",
+            "background-dark": "#0f1923",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div class="flex-grow pb-32">
+<header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark border-b border-white/10 dark:border-black/10">
+<button class="flex items-center justify-center size-10 text-slate-800 dark:text-slate-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-slate-900 dark:text-white pr-10">Booking Details</h1>
+</header>
+<div class="p-4 space-y-6">
+<div class="rounded-xl bg-white dark:bg-slate-800/50 p-4 shadow-sm">
+<div class="flex items-start gap-4">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">plumbing</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-lg font-bold text-slate-900 dark:text-white">Emergency Plumbing Fix</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Status: <span class="text-green-500 font-medium">Completed</span></p>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-white dark:bg-slate-800/50 p-4 shadow-sm space-y-4">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-3">Service Provider</h2>
+<div class="flex items-center gap-4">
+<img alt="Provider Photo" class="size-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0boMUmhumfJGexIwmEwjYQjQtAgcgZU64-lODwzjBnXhmLhKHeWFrU-gWELU9NgZNsl-VP0gFDLyfmmg8vZqlE6j4Yahut4BuUemuQ-7LfVwCbRBUwYGVvCpu5RhYl1nT3bdrTNhfSBsdooOTy43cjv1BT7rfyyRMuYKkhBl6OtTJ41MxNoZiW8KIU-mn8ccYbhFDmJYDxzf88AL7wCI3vwL1rfZL8-qrhrLEORRLkbFjMbht2IVn5ZeQBbLdRJeVd-H5uEd_etIS"/>
+<div class="flex-1">
+<p class="font-bold text-slate-800 dark:text-white">Johnathan Doe</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">John's Plumbing</p>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-white dark:bg-slate-800/50 p-4 shadow-sm" x-data="{ reviewed: false, rating: 0, showForm: false }">
+<div class="flex justify-between items-center pb-3 border-b border-slate-200 dark:border-slate-700" x-show="!reviewed">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Leave a review</h2>
+</div>
+<div class="mt-4" x-show="reviewed">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white pb-3 border-b border-slate-200 dark:border-slate-700">Your Review</h2>
+<div class="flex items-center gap-1 text-amber-400 mt-4">
+<span class="material-symbols-outlined text-xl !font-bold">star</span>
+<span class="material-symbols-outlined text-xl !font-bold">star</span>
+<span class="material-symbols-outlined text-xl !font-bold">star</span>
+<span class="material-symbols-outlined text-xl !font-bold">star</span>
+<span class="material-symbols-outlined text-xl text-slate-300 dark:text-slate-600">star</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 mt-2">The plumber was very professional and fixed the issue quickly. Highly recommended!</p>
+</div>
+<div class="mt-4 space-y-4" x-show="!reviewed">
+<div>
+<p class="text-sm font-medium text-center text-slate-700 dark:text-slate-300 mb-2">How was your experience?</p>
+<div class="flex items-center justify-center gap-2">
+<template x-for="i in 5">
+<button :class="i &lt;= rating ? 'text-amber-400' : 'text-slate-300 dark:text-slate-600 hover:text-amber-300'" @click="rating = i" class="text-4xl transition-colors">
+<span class="material-symbols-outlined !text-4xl" x-text="i &lt;= rating ? 'star' : 'star'"></span>
+</button>
+</template>
+</div>
+</div>
+<div>
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="review">Your Feedback</label>
+<textarea class="mt-1 block w-full rounded-lg border-slate-300 bg-slate-50 dark:bg-slate-700 dark:border-slate-600 dark:text-white focus:border-primary focus:ring-primary text-sm" id="review" placeholder="Tell us about your experience..." rows="4"></textarea>
+</div>
+<div class="flex justify-end">
+<button @click="reviewed = true" class="h-10 px-6 w-full rounded-lg bg-primary text-white text-sm font-bold">Submit Review</button>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-white dark:bg-slate-800/50 p-4 shadow-sm space-y-4">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-3">Booking Information</h2>
+<div class="space-y-3">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mr-3">calendar_today</span>
+<p class="text-sm text-slate-800 dark:text-white">Tuesday, August 12, 2024</p>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mr-3">schedule</span>
+<p class="text-sm text-slate-800 dark:text-white">2:30 PM - 3:30 PM (ET)</p>
+</div>
+<div class="flex items-start">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400 mr-3 mt-0.5">location_on</span>
+<p class="text-sm text-slate-800 dark:text-white">123 Maple Street, Apt 4B,<br/>Springfield, USA 12345</p>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-white dark:bg-slate-800/50 p-4 shadow-sm">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-3 mb-4">Final Price</h2>
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<p class="text-slate-500 dark:text-slate-400">Base Fee</p>
+<p class="text-slate-800 dark:text-white">$80.00</p>
+</div>
+<div class="flex justify-between text-sm">
+<p class="text-slate-500 dark:text-slate-400">Service Charge</p>
+<p class="text-slate-800 dark:text-white">$5.00</p>
+</div>
+<div class="flex justify-between text-sm">
+<p class="text-slate-500 dark:text-slate-400">Tax</p>
+<p class="text-slate-800 dark:text-white">$7.50</p>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-700 my-2"></div>
+<div class="flex justify-between font-bold">
+<p class="text-slate-900 dark:text-white">Total</p>
+<p class="text-primary">$92.50</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800/50">
+<div class="flex items-center gap-4">
+<button class="flex-1 h-12 flex items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white font-bold hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
+          Get Invoice
+        </button>
+<button class="flex-1 h-12 flex items-center justify-center rounded-lg bg-primary text-white font-bold hover:bg-primary/90 transition-colors">
+          Rebook
+        </button>
+</div>
+</div>
+</div>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</body></html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13a4ec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+              "content-light": "#111618",
+              "content-dark": "#ffffff",
+              "subtle-light": "#617c89",
+              "subtle-dark": "#a0b8c3",
+            },
+            fontFamily: {
+              display: ["Manrope"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-content-light dark:text-content-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div class="flex-grow">
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-black/10 dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 p-4 backdrop-blur-sm">
+<button class="flex size-10 items-center justify-center rounded-full text-content-light dark:text-content-dark">
+<span class="material-symbols-outlined"> arrow_back </span>
+</button>
+<h1 class="text-lg font-bold">Provider Profile</h1>
+<div class="w-10"></div>
+</header>
+<main class="p-4">
+<div class="flex flex-col items-center text-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-32 h-32 mb-4 ring-4 ring-primary/20" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBpIaB4leAdzSVylaG5UaiWk0j11YiSRItn01fyHNaqtXgRjuLGVtWyEGZSJRmHagKjoRERUviMgsLjVPqNJYExLEhRlOnXGsZTRjljy6B6O0dJIFECKOSXcwNmSrs47_pTpqjrAPXw860Kgjf_1wZR1tjGGD7dFckAtyrRFKMtELI69TIORlvsDxC8ZukZYvDz8W2CJg8yzQnm1k7LCTeYfX3zvic86xHM_Hh_6RE4Hi9x0_rTni8ABJLy2Q9LHomNmipBi0uu5Jme");'></div>
+<div class="flex items-center gap-2">
+<h2 class="text-2xl font-bold">Sophia Bennett</h2>
+<span class="material-symbols-outlined text-primary text-xl">
+                verified
+              </span>
+</div>
+<p class="text-subtle-light dark:text-subtle-dark">
+              Verified Provider
+            </p>
+<div class="flex items-center gap-1 text-subtle-light dark:text-subtle-dark mt-1">
+<span class="material-symbols-outlined text-base text-primary"> star </span>
+<span>4.9 (120 reviews)</span>
+</div>
+</div>
+<div class="mt-8">
+<h3 class="text-xl font-bold mb-2">About</h3>
+<p class="text-subtle-light dark:text-subtle-dark">
+              Sophia is a certified personal trainer with over 5 years of
+              experience. She specializes in strength training, weight loss, and
+              functional fitness. Her approach is personalized, focusing on
+              individual goals and needs to ensure effective and sustainable
+              results.
+            </p>
+</div>
+<div class="mt-8">
+<h3 class="text-xl font-bold mb-4">Services</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between rounded-lg p-4 bg-white dark:bg-background-dark/50 shadow-sm">
+<div>
+<p class="font-medium">Personal Training</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">60 min · $80</p>
+</div>
+<button class="shrink-0 rounded-full bg-primary/10 dark:bg-primary/20 px-4 py-2 text-sm font-bold text-primary">Book</button>
+</div>
+<div class="flex items-center justify-between rounded-lg p-4 bg-white dark:bg-background-dark/50 shadow-sm">
+<div>
+<p class="font-medium">Virtual Coaching</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">45 min · $60</p>
+</div>
+<button class="shrink-0 rounded-full bg-primary/10 dark:bg-primary/20 px-4 py-2 text-sm font-bold text-primary">Book</button>
+</div>
+<div class="flex items-center justify-between rounded-lg p-4 bg-white dark:bg-background-dark/50 shadow-sm">
+<div>
+<p class="font-medium">Group Fitness</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">90 min · $120</p>
+</div>
+<button class="shrink-0 rounded-full bg-primary/10 dark:bg-primary/20 px-4 py-2 text-sm font-bold text-primary">Book</button>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h3 class="text-xl font-bold mb-4">Availability</h3>
+<div class="rounded-xl bg-white dark:bg-background-dark/50 p-4 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<p class="font-bold">July 2024</p>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center text-sm">
+<div class="font-bold text-subtle-light dark:text-subtle-dark">S</div>
+<div class="font-bold text-subtle-light dark:text-subtle-dark">M</div>
+<div class="font-bold text-subtle-light dark:text-subtle-dark">T</div>
+<div class="font-bold text-subtle-light dark:text-subtle-dark">W</div>
+<div class="font-bold text-subtle-light dark:text-subtle-dark">T</div>
+<div class="font-bold text-subtle-light dark:text-subtle-dark">F</div>
+<div class="font-bold text-subtle-light dark:text-subtle-dark">S</div>
+<div class="col-start-4 w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">1</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">2</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">3</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">4</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white cursor-pointer">5</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">6</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">7</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">8</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">9</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">10</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">11</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">12</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">13</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">14</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">15</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">16</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">17</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">18</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">19</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">20</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">21</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">22</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">23</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">24</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">25</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">26</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">27</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">28</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">29</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">30</div>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h3 class="text-xl font-bold mb-4">Reviews</h3>
+<div class="space-y-6">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzxUc_6Osqw-JAZ4aYp-2Io0XyInzAGfkl0ypRZhv6zzL-LUOMpDXbLm_p49dOdKNIks7i9Nz6eHuLbEsm7CjyvHP4zBFA8E7LW4YMrWeYRFZm1vLFhTnip1K6iPVnRVPDWbWH2p-zascmWkAMoC014OzvH0DO9VnmhXYRkSnNuYH5C_pYa9u0eOgE77SaSDkClZd1eqiM7SnnztwzPz-h0ZcvXq8OlRuq-8y43HuoPw9AvZhMr7HJIHnjY0xAQRGCdX7jqfHvUkAQ");'></div>
+<div class="flex-1">
+<p class="font-medium">Ethan Carter</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">2 weeks ago</p>
+</div>
+</div>
+<div class="flex gap-0.5 text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+</div>
+<p class="text-subtle-light dark:text-subtle-dark">Sophia is an amazing trainer! She's knowledgeable, motivating, and really cares about her clients. I've seen great results in just a few weeks.</p>
+<div class="flex gap-4 text-subtle-light dark:text-subtle-dark">
+<button class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg">thumb_up</span>
+<span class="text-sm">5</span>
+</button>
+<button class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">thumb_down</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCt1BV_EriLBUsH52JHZrOC0F-D8rUw76XGx_AyFNL4CrRf8im86yfbnFHYeiUMmySFJxnhyieraJjvyhTVMy_koXkM9nZ-FexR2zkQkbM_F4O6tTrqXhXv8qpK1eJBfZp6yHqG8GPvFuYeJ33xc-GzUkhXCIHtezko8cy3oIvMGDhpr3uvQ3NazxGiH0VM4ZUylMLwEAWWEfWaOAwn7GsMsKksAlzgexF0juzxjHzeOfR8F8BDC_NTmCn0I1XWI5pLJXdyZB0Dbrua");'></div>
+<div class="flex-1">
+<p class="font-medium">Olivia Harper</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">1 month ago</p>
+</div>
+</div>
+<div class="flex gap-0.5 text-primary">
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+<span class="material-symbols-outlined text-lg text-subtle-light dark:text-subtle-dark">star_outline</span>
+</div>
+<p class="text-subtle-light dark:text-subtle-dark">Sophia is a great trainer, very professional and knowledgeable. She helped me achieve my fitness goals.</p>
+<div class="flex gap-4 text-subtle-light dark:text-subtle-dark">
+<button class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg">thumb_up</span>
+<span class="text-sm">3</span>
+</button>
+<button class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">thumb_down</span>
+<span class="text-sm">1</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex justify-center p-4 border-t border-black/10 dark:border-white/10">
+<div class="flex flex-1 gap-3 max-w-md">
+<button class="flex-1 rounded-lg h-12 px-5 bg-primary/20 dark:bg-primary/30 text-primary text-base font-bold">Message</button>
+<button class="flex-1 rounded-lg h-12 px-5 bg-primary text-white text-base font-bold">Book Now</button>
+</div>
+</div>
+<div class="flex justify-around border-t border-black/10 dark:border-white/10 py-2">
+<a class="flex flex-col items-center justify-end gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-xs font-medium">Home</p>
+</a>
+<a class="flex flex-col items-center justify-end gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">search</span>
+<p class="text-xs font-medium">Search</p>
+</a>
+<a class="flex flex-col items-center justify-end gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<p class="text-xs font-medium">Bookings</p>
+</a>
+<a class="flex flex-col items-center justify-end gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-xs font-medium">Profile</p>
+</a>
+</div>
+</footer>
+</div>
+</body></html>

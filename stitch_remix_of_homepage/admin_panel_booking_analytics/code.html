@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13a4ec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Manrope"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px"
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined"> arrow_back </span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-slate-900 dark:text-white pr-10">Booking Analytics</h1>
+</div>
+</header>
+<main class="flex-1 space-y-8 p-4">
+<section>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Booking Trends</h2>
+<div class="rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-background-light/50 dark:bg-background-dark/50 p-4">
+<div class="flex flex-col gap-2">
+<p class="text-sm text-slate-500 dark:text-slate-400">Total Bookings</p>
+<p class="text-3xl font-bold text-slate-900 dark:text-white">1,234</p>
+<div class="flex items-center gap-2 text-sm">
+<p class="text-slate-500 dark:text-slate-400">Last 30 Days</p>
+<p class="font-medium text-green-500 dark:text-green-400">+15%</p>
+</div>
+</div>
+<div class="mt-6 h-48">
+<svg fill="none" height="100%" preserveAspectRatio="none" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="chart-gradient" x1="0" x2="0" y1="0" y2="150">
+<stop stop-color="var(--tw-color-primary)" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="var(--tw-color-primary)" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V150H0V109Z" fill="url(#chart-gradient)"></path>
+<path class="text-primary" d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+<div class="mt-4 flex justify-between text-xs font-medium text-slate-500 dark:text-slate-400">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Popular Services</h2>
+<div class="space-y-2">
+<div class="flex items-center gap-4 rounded-lg bg-background-light/50 dark:bg-background-dark/50 p-3">
+<div class="h-14 w-14 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDjf__fXK-_OYF_sJstLnvIAt_tD-gy_B5JeWvcAOBceEqE-Y1RzF7ji8I6gC9qYD6t8cplc6_azz7roj_p1thESxyrEl_uSmKaiJhLvMcsdy4f1Y9Ki2y7rLYSigddZ7bpikcaG-JT4HBKfw8W7inJAuS89MRn0ZEFWRuIiN6LRo528hFahlalWVKV8d708UgZkoq7tII1XYhaoXhJ6yYj-lHIOOUUHnp-4vURAMl57pkKN5wEbU0qrbSxH1k7_ZzLWdav02MK6vZe");'></div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-200">Haircut</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">150 bookings</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-background-light/50 dark:bg-background-dark/50 p-3">
+<div class="h-14 w-14 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcc75YeVcpTR9fJZCRjNaOlJLhqwvTq1lsyPXSzosz9lYsckTcnFYkEolOdka3MDREeSgNFMVC02JTXMaH3X-w5vaR19GhRAjPKS9p_wHfhvxg3gOD6VGPIPhEyxAEuxpd2f5_gQLCpHNzwv9o1a-5Mk4qKYx0kBglw2D4quAMNc04aVY7NLp8CMwAEimgItxe3pKRVTLhJmPsroUKTub8Dp2telnu2xkIgV09UbbkiFozV9ZlPFxdJiOCbMw-9h4L60vUAYLmPVCk");'></div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-200">Manicure</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">120 bookings</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-background-light/50 dark:bg-background-dark/50 p-3">
+<div class="h-14 w-14 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBYm1h65z4ngQrdLVUMpstwEBkJs02EAYIyQUuOhdbSpPqLH0SNfgJHy1Wan6wxfjIiK_PN8ueD7-G8n4VbzxNwVVqGyi6yYEwPtKJBuzTbxTXv-KnwHkltPBWr6r2vPrJqaInKkefK88kPfyVJ4MgGJ-IiS2edlPbSplPpKfHGOVsXGTU1Q-jBowWjnMwP0EmepwQJB2EW2uam4UwgdlQ-5V6w1jYpISUpGMEyTY2zjG36abFN4MW5HJkeqSwhXK6muQZwPu_kCckK");'></div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-200">Massage</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">100 bookings</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Provider Performance</h2>
+<div class="space-y-2">
+<div class="flex items-center gap-4 rounded-lg bg-background-light/50 dark:bg-background-dark/50 p-3">
+<div class="h-14 w-14 flex-shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVetwNG_eX_hXz-42_wOQFYqzistrxbAXkgnxQEVEbtBTLEfCaAA8Sm2XhlQZ3nVOKNGYEytwQILUqeKGeMtFOyjjyDKBQm4d88oSXWiCY-oockkFaV327bTYkRclJ2W_4MDJDdiA8w8MDiMhnZmNq9ufF0aPVAa5zlqbYAvGNXCM3pnrkUyraHDnS4G94MP3RjM_t35zaosv7UbPUWDzFFA_B4keZUEec2aNFjwV6hDBn0JmjrGrEeHvh0LXW40CkNtWlQcofXB3p");'></div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-200">Sophia Clark</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">4.8 stars, 100 bookings</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-background-light/50 dark:bg-background-dark/50 p-3">
+<div class="h-14 w-14 flex-shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTgdbh38ii2Ai3_YpSYYPlwJFnXiQOL8Yw6BkpJFpOHQMXNh4cvKOyny_1TfvljR_OlNrzgD8Pe-T56yJe0V_YnKJGkkoWeAvVAUp03ry6SdpzPbTjbcpqCwiPe-vje1_e_Vs9a_7pegfCR6iWi6Ls8Ybbw710fjrfmaAIix7TMrmaBB9a8URFssFGFLWssMbCfo3HKawJdQFT0JXh5XZWh-AgA4AHAEYXw_aoC6sy9kdRggpR61PUurLtdES0LwafMPG7ZjP1x9zo");'></div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-200">Ethan Bennett</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">4.7 stars, 90 bookings</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-background-light/50 dark:bg-background-dark/50 p-3">
+<div class="h-14 w-14 flex-shrink-0 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVu1SwvI1dSyXEO7uZPvnIrHKG0_r__xhc6KtwzLQCMJtP4e65cGZ7SodPRcK7uDUUsUl0t_yTVwJUQyur_y93-lXa7_3aZ7-rI8pfCett4qaqzP80LAjIlFvjThZ-ZiKFjq36EieT2txZQf-VJ1GCYn3Sjs5jkTpg9V_EtXffbdeWSpT3QAAOFcAozqK_4hq9gJIbBeERgoK0qPG3XSADF7uDiQRc2X0-dxB3ZGJhVc87bmV-edg5U0EkwD6KTkIy8RyJ6hA8NaUI");'></div>
+<div class="flex-1">
+<p class="font-semibold text-slate-800 dark:text-slate-200">Olivia Carter</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">4.6 stars, 80 bookings</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Customer Engagement</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-background-light/50 dark:bg-background-dark/50 p-4">
+<p class="text-sm text-slate-500 dark:text-slate-400">Active Users</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-white">500</p>
+<p class="text-sm font-medium text-green-500 dark:text-green-400">+10%</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl border border-slate-200/80 dark:border-slate-800/80 bg-background-light/50 dark:bg-background-dark/50 p-4">
+<p class="text-sm text-slate-500 dark:text-slate-400">Repeat Bookers</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-white">200</p>
+<p class="text-sm font-medium text-green-500 dark:text-green-400">+5%</p>
+</div>
+</div>
+</section>
+</main>
+<div class="h-5 bg-background-light dark:bg-background-dark"></div>
+</div>
+
+</body></html>

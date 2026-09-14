@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html class="" lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#359EFF", "background-light": "#f5f7f8", "background-dark": "#0f1923"}, fontFamily: {display: "Manrope"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex-grow">
+<header class="sticky top-0 z-10 flex items-center justify-between p-4 bg-background-light dark:bg-background-dark">
+<button class="text-background-dark dark:text-background-light">
+<span class="material-symbols-outlined"> arrow_back </span>
+</button>
+<h1 class="text-xl font-bold text-center text-background-dark dark:text-background-light flex-1">Service Details</h1>
+<div class="w-8"></div>
+</header>
+<main class="p-4 space-y-6">
+<div>
+<label class="block text-sm font-medium text-background-dark/70 dark:text-background-light/70 mb-1" for="service-title">Service Title</label>
+<input class="w-full p-3 rounded-lg border-0 bg-background-light/80 dark:bg-background-dark/80 text-background-dark dark:text-background-light placeholder-background-dark/40 dark:placeholder-background-light/40 focus:ring-2 focus:ring-primary/50" id="service-title" placeholder="e.g., Wedding Photography" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-background-dark/70 dark:text-background-light/70 mb-1" for="service-type">Type of Service</label>
+<select class="w-full p-3 rounded-lg border-0 bg-background-light/80 dark:bg-background-dark/80 text-background-dark dark:text-background-light focus:ring-2 focus:ring-primary/50 appearance-none" id="service-type" style="background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 20 20%27%3e%3cpath stroke=%27%23102216%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%271.5%27 d=%27M6 8l4 4 4-4%27/%3e%3c/svg%3e'); background-position: right 0.5rem center; background-repeat: no-repeat; background-size: 1.5em 1.5em;">
+<option>Barbers &amp; Beauty</option>
+<option>Mechanics</option>
+<option>Pet Care</option>
+<option selected="">Photographers/Videographers</option>
+<option>Tutors</option>
+<option>Event Planners</option>
+<option>Fitness &amp; Wellness</option>
+<option>Plumbers &amp; Electricians</option>
+<option>Home Cleaning</option>
+<option>Others</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-background-dark/70 dark:text-background-light/70 mb-1" for="service-description">Service Description</label>
+<textarea class="w-full p-3 rounded-lg border-0 bg-background-light/80 dark:bg-background-dark/80 text-background-dark dark:text-background-light placeholder-background-dark/40 dark:placeholder-background-light/40 focus:ring-2 focus:ring-primary/50" id="service-description" placeholder="Describe the service..." rows="5"></textarea>
+</div>
+<div>
+<label class="block text-sm font-medium text-background-dark/70 dark:text-background-light/70 mb-1" for="duration">Duration</label>
+<select class="w-full p-3 rounded-lg border-0 bg-background-light/80 dark:bg-background-dark/80 text-background-dark dark:text-background-light focus:ring-2 focus:ring-primary/50 appearance-none" id="duration" style="background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 20 20%27%3e%3cpath stroke=%27%23102216%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%271.5%27 d=%27M6 8l4 4 4-4%27/%3e%3c/svg%3e'); background-position: right 0.5rem center; background-repeat: no-repeat; background-size: 1.5em 1.5em;">
+<option value="60">1 Hour</option>
+<option selected="" value="120">2 Hours</option>
+<option value="180">3 Hours</option>
+<option value="custom">Custom</option>
+</select>
+</div>
+<div>
+<h2 class="text-lg font-bold text-background-dark dark:text-background-light mb-2">Inclusions</h2>
+<div class="space-y-3">
+<label class="flex items-center space-x-3 text-background-dark dark:text-background-light">
+<input checked="" class="h-5 w-5 rounded-md border-background-dark/20 dark:border-background-light/20 bg-transparent text-primary focus:ring-primary/50 checked:bg-primary" type="checkbox"/>
+<span>2-hour photography session</span>
+</label>
+<label class="flex items-center space-x-3 text-background-dark dark:text-background-light">
+<input checked="" class="h-5 w-5 rounded-md border-background-dark/20 dark:border-background-light/20 bg-transparent text-primary focus:ring-primary/50 checked:bg-primary" type="checkbox"/>
+<span>Professional editing</span>
+</label>
+<label class="flex items-center space-x-3 text-background-dark dark:text-background-light">
+<input checked="" class="h-5 w-5 rounded-md border-background-dark/20 dark:border-background-light/20 bg-transparent text-primary focus:ring-primary/50 checked:bg-primary" type="checkbox"/>
+<span>Digital delivery of images</span>
+</label>
+</div>
+</div>
+<div>
+<h2 class="text-lg font-bold text-background-dark dark:text-background-light mb-2">Exclusions</h2>
+<div class="space-y-3">
+<label class="flex items-center space-x-3 text-background-dark dark:text-background-light">
+<input class="h-5 w-5 rounded-md border-background-dark/20 dark:border-background-light/20 bg-transparent text-primary focus:ring-primary/50 checked:bg-primary" type="checkbox"/>
+<span>Prints</span>
+</label>
+<label class="flex items-center space-x-3 text-background-dark dark:text-background-light">
+<input class="h-5 w-5 rounded-md border-background-dark/20 dark:border-background-light/20 bg-transparent text-primary focus:ring-primary/50 checked:bg-primary" type="checkbox"/>
+<span>Travel expenses (outside 20-mile radius)</span>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-background-dark/70 dark:text-background-light/70 mb-1" for="price">Price</label>
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="text-background-dark/40 dark:text-background-light/40">$</span>
+</div>
+<input class="w-full pl-7 p-3 rounded-lg border-0 bg-background-light/80 dark:bg-background-dark/80 text-background-dark dark:text-background-light placeholder-background-dark/40 dark:placeholder-background-light/40 focus:ring-2 focus:ring-primary/50" id="price" placeholder="500.00" type="text"/>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary text-background-dark font-bold py-3 px-4 rounded-lg shadow-lg hover:bg-primary/90 transition-colors">
+              Save Changes
+            </button>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-background-dark/10 dark:border-background-light/10">
+<nav class="flex justify-around items-center p-2">
+<a class="flex flex-col items-center gap-1 text-background-dark/60 dark:text-background-light/60" href="#">
+<span class="material-symbols-outlined"> home </span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-background-dark/60 dark:text-background-light/60" href="#">
+<span class="material-symbols-outlined"> calendar_month </span>
+<span class="text-xs font-medium">Bookings</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined"> person </span>
+<span class="text-xs font-bold">Profile</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-background-dark/60 dark:text-background-light/60" href="#">
+<span class="material-symbols-outlined"> settings </span>
+<span class="text-xs font-medium">Settings</span>
+</a>
+</nav>
+</footer>
+</div>
+</body></html>

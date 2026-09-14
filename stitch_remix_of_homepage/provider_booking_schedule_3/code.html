@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Provider Booking Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0684f9",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                        "foreground-light": "#0d151c",
+                        "foreground-dark": "#f5f7f8",
+                        "subtle-light": "#47749e",
+                        "subtle-dark": "#a1c2e0",
+                        "border-light": "#cedce9",
+                        "border-dark": "#2a3f53",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="p-2 -ml-2">
+<span class="material-symbols-outlined text-foreground-light dark:text-foreground-dark">arrow_back</span>
+</button>
+<h1 class="flex-1 text-lg font-bold text-center">Booking Details</h1>
+<button class="p-2 -mr-2">
+<span class="material-symbols-outlined text-foreground-light dark:text-foreground-dark">more_vert</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-4">
+<div class="space-y-6">
+<div class="p-4 rounded-lg bg-white dark:bg-zinc-800 shadow-sm border border-border-light dark:border-border-dark">
+<h2 class="text-lg font-bold text-foreground-light dark:text-foreground-dark mb-4">Booking Status</h2>
+<div class="flex gap-4">
+<button class="flex-1 py-3 px-4 bg-primary text-white font-bold rounded-lg text-center flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">hourglass_top</span>
+<span>Ongoing</span>
+</button>
+<button class="flex-1 py-3 px-4 bg-gray-200 dark:bg-zinc-700 text-foreground-light dark:text-foreground-dark font-bold rounded-lg text-center flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">check_circle</span>
+<span>Complete</span>
+</button>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-white dark:bg-zinc-800 shadow-sm border border-border-light dark:border-border-dark">
+<div class="flex items-center gap-4">
+<div class="flex-shrink-0 w-16 h-16 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCemW0W6s9klXdr57WVvPq1u9VQ2-U70LQZLvVB8W0MGgy212Rm-3T3sRejUDtWvn3sQzvpxtLZB77ofTdJqoscbweKiY8LZY7CdNDOzO6EXCwHgkB7XXxAf5pFwZ5RkeZkpTeQ9IfpeKWnXY3iB3PkTdDLjZVrcoRNsHMQmngexDxWwntJXx52XT0An7cqXbnY_GnIngtCXkWJMIT3ZgfuIJgTQK_uCg1l5UQmEc3GqjV5L9ApezFoh1idD0I2mq_Q2pX_v8uoXdd1");'></div>
+<div class="flex-1">
+<p class="font-bold text-xl text-foreground-light dark:text-foreground-dark">Eleanor Pena</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Customer</p>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-white dark:bg-zinc-800 shadow-sm border border-border-light dark:border-border-dark space-y-4">
+<h2 class="text-lg font-bold text-foreground-light dark:text-foreground-dark">Service Details</h2>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-subtle-light dark:text-subtle-dark mr-4">cut</span>
+<div class="flex-1">
+<p class="font-semibold">Haircut</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Style &amp; Cut</p>
+</div>
+<p class="font-bold text-primary">$45.00</p>
+</div>
+<div class="border-t border-border-light dark:border-border-dark my-4"></div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-subtle-light dark:text-subtle-dark mr-4">calendar_today</span>
+<div>
+<p class="font-semibold">Thursday, April 11, 2024</p>
+</div>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-subtle-light dark:text-subtle-dark mr-4">schedule</span>
+<div>
+<p class="font-semibold">10:00 AM - 11:00 AM</p>
+</div>
+</div>
+<div class="flex items-start">
+<span class="material-symbols-outlined text-subtle-light dark:text-subtle-dark mr-4 mt-1">location_on</span>
+<div>
+<p class="font-semibold">123 Beauty Lane, Suite 101</p>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Glamour City, ST 12345</p>
+</div>
+</div>
+</div>
+<div class="h-48 rounded-lg overflow-hidden shadow-sm">
+<img alt="Map view of the location" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBgaGzpoXFw8tpNOyIXqP2qfo1C-Mqxh5i9sKrQTXxa4fEg4v_i0vWx8WYWRDCrMtFg0CKYAqQxrMGWJCLlZqBQdJFK3Ouu9L6YT5ET4h0gCV_KhRkSUBIgckBP8TmR_jJ0vT699XaO7GkUxUZCOJiMQzbDjvCYFNjj0yezTi6mUuN3ggLuHFLiA5qZWaXV3-cDpoxP0VkK2K5MD-tFuvBvyXJV7mler6MexJ9fvxOKEkWTLavhfkqQUXj_w7FLIPw9RaTeiaFPpV8"/>
+</div>
+<div class="p-4 rounded-lg bg-white dark:bg-zinc-800 shadow-sm border border-border-light dark:border-border-dark">
+<h2 class="text-lg font-bold text-foreground-light dark:text-foreground-dark mb-4">Contact Customer</h2>
+<div class="flex justify-around">
+<button class="flex flex-col items-center gap-2 text-primary">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">call</span>
+</div>
+<span class="text-sm font-semibold">Call</span>
+</button>
+<button class="flex flex-col items-center gap-2 text-primary">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">email</span>
+</div>
+<span class="text-sm font-semibold">Email</span>
+</button>
+<button class="flex flex-col items-center gap-2 text-primary">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">chat</span>
+</div>
+<span class="text-sm font-semibold">Message</span>
+</button>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 py-3 px-4 bg-gray-200 dark:bg-zinc-700 text-foreground-light dark:text-foreground-dark font-bold rounded-lg text-center">Reschedule</button>
+<button class="flex-1 py-3 px-4 bg-red-500 text-white font-bold rounded-lg text-center">Cancel Booking</button>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

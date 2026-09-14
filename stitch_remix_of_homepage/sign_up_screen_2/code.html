@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign Up</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .form-input::placeholder {
+            color: #617c89;
+        }
+        .dark .form-input::placeholder {
+            color: #a0aec0;
+        }
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen">
+<header class="flex justify-end p-4">
+<button class="text-gray-800 dark:text-white">
+<svg class="bi bi-question-circle" fill="currentColor" height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+<path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"></path>
+</svg>
+</button>
+</header>
+<main class="flex-grow flex flex-col justify-center px-6 sm:px-8">
+<div class="w-full max-w-md mx-auto" x-data="{ accountType: 'provider' }">
+<h1 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-4">Create your account</h1>
+<p class="text-center text-gray-600 dark:text-gray-400 mb-8">Join our community of service providers and customers.</p>
+<div class="mb-6">
+<div class="flex border border-gray-300 dark:border-gray-600 rounded-lg p-1 bg-gray-100 dark:bg-gray-800 relative">
+<div :class="{ 'translate-x-0': accountType === 'customer', 'translate-x-full': accountType === 'provider' }" class="absolute top-1 left-1 bottom-1 w-1/2 bg-primary rounded-md shadow-md transition-transform duration-300 ease-in-out"></div>
+<button :class="{ 'text-white': accountType === 'customer', 'text-gray-600 dark:text-gray-400': accountType !== 'customer' }" @click="accountType = 'customer'" class="w-1/2 py-2 rounded-md font-semibold transition-colors duration-300 relative z-10">
+                        Customer
+                    </button>
+<button :class="{ 'text-white': accountType === 'provider', 'text-gray-600 dark:text-gray-400': accountType !== 'provider' }" @click="accountType = 'provider'" class="w-1/2 py-2 rounded-md font-semibold transition-colors duration-300 relative z-10">
+                        Service Provider
+                    </button>
+</div>
+</div>
+<div x-cloak="" x-show="accountType === 'customer'">
+<form class="space-y-4">
+<div>
+<label class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block" for="customer-email">Email <span class="text-red-500">*</span></label>
+<input class="form-input w-full bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 rounded-lg p-4 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="customer-email" name="customer-email" placeholder="you@example.com" required="" type="email"/>
+</div>
+<div>
+<label class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block" for="customer-phone">Phone Number <span class="text-red-500">*</span></label>
+<div class="relative">
+<input class="form-input w-full bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 rounded-lg p-4 pl-12 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="customer-phone" name="customer-phone" placeholder="Phone Number" required="" type="tel"/>
+<div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+<svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.759a1.037 1.037 0 00-.54 1.06A11.035 11.035 0 008.354 14.5l.758-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C6.477 18 2 13.523 2 8V5a1 1 0 011-1h.153z"></path></svg>
+</div>
+</div>
+</div>
+<div>
+<label class="sr-only" for="customer-password">Password</label>
+<input class="form-input w-full bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 rounded-lg p-4 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="customer-password" name="customer-password" placeholder="Password" required="" type="password"/>
+</div>
+<div>
+<label class="sr-only" for="customer-confirm-password">Confirm Password</label>
+<input class="form-input w-full bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 rounded-lg p-4 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="customer-confirm-password" name="customer-confirm-password" placeholder="Confirm Password" required="" type="password"/>
+</div>
+<button class="w-full bg-primary text-white font-bold py-4 px-4 rounded-lg hover:bg-primary/90 transition-colors duration-300" type="submit">
+                            Sign Up as a Customer
+                        </button>
+</form>
+</div>
+<div x-cloak="" x-show="accountType === 'provider'">
+<form class="space-y-4">
+<div>
+<label class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block" for="provider-email">Email <span class="text-red-500">*</span></label>
+<input class="form-input w-full bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 rounded-lg p-4 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="provider-email" name="provider-email" placeholder="you@example.com" required="" type="email"/>
+</div>
+<div>
+<label class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block" for="provider-phone">Phone Number <span class="text-red-500">*</span></label>
+<div class="relative">
+<input class="form-input w-full bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 rounded-lg p-4 pl-12 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="provider-phone" name="provider-phone" placeholder="Phone Number" required="" type="tel"/>
+<div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+<svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.759a1.037 1.037 0 00-.54 1.06A11.035 11.035 0 008.354 14.5l.758-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C6.477 18 2 13.523 2 8V5a1 1 0 011-1h.153z"></path></svg>
+</div>
+</div>
+</div>
+<div>
+<label class="sr-only" for="provider-password">Password</label>
+<input class="form-input w-full bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 rounded-lg p-4 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="provider-password" name="provider-password" placeholder="Password" required="" type="password"/>
+</div>
+<div>
+<label class="sr-only" for="provider-confirm-password">Confirm Password</label>
+<input class="form-input w-full bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 rounded-lg p-4 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="provider-confirm-password" name="provider-confirm-password" placeholder="Confirm Password" required="" type="password"/>
+</div>
+<button class="w-full bg-primary text-white font-bold py-4 px-4 rounded-lg hover:bg-primary/90 transition-colors duration-300" type="submit">
+                            Sign Up as a Provider
+                        </button>
+</form>
+</div>
+<div class="relative flex py-5 items-center">
+<div class="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+<span class="flex-shrink mx-4 text-gray-600 dark:text-gray-400">Or sign up with</span>
+<div class="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<button class="w-full flex items-center justify-center gap-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white font-bold py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path><path d="M1 1h22v22H1z" fill="none"></path></svg>
+                        Google
+                    </button>
+<button class="w-full flex items-center justify-center gap-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white font-bold py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-300">
+<svg class="w-5 h-5" fill="#1877F2" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-1.5c-.86 0-1 .41-1 .99V12h2.5l-.32 3H14v6.8c4.56-.93 8-4.96 8-9.8z"></path></svg>
+                        Facebook
+                    </button>
+</div>
+</div>
+</main>
+<footer class="p-6 text-center">
+<p class="text-sm text-gray-600 dark:text-gray-400">
+                Already have an account? 
+                <a class="font-medium text-primary hover:underline" href="#">Sign In</a>
+</p>
+</footer>
+</div>
+</body></html>

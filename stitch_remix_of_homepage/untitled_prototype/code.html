@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ServicePro Help Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#f1f3fe",
+                        "surface-dim": "#d7d9e5",
+                        "secondary-container": "#d8e1ea",
+                        "background": "#f9f9ff",
+                        "surface-container-highest": "#e0e2ed",
+                        "surface-container": "#ebedf9",
+                        "error-container": "#ffdad6",
+                        "primary": "#0059bb",
+                        "secondary": "#575f67",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#bfc8d0",
+                        "surface": "#f9f9ff",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3039",
+                        "on-tertiary-fixed-variant": "#7c2e00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "outline-variant": "#c1c6d7",
+                        "surface-variant": "#e0e2ed",
+                        "surface-container-high": "#e6e8f3",
+                        "inverse-on-surface": "#eef0fb",
+                        "primary-fixed-dim": "#adc7ff",
+                        "tertiary-container": "#c64f00",
+                        "surface-tint": "#005bc0",
+                        "on-tertiary-fixed": "#351000",
+                        "inverse-primary": "#adc7ff",
+                        "secondary-fixed": "#dbe4ed",
+                        "on-secondary-fixed-variant": "#3f484f",
+                        "tertiary": "#9e3d00",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d8e2ff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-bright": "#f9f9ff",
+                        "outline": "#717786",
+                        "on-primary-container": "#fefcff",
+                        "on-secondary-container": "#5b646b",
+                        "on-surface-variant": "#414754",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001a41",
+                        "on-secondary-fixed": "#141d23",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#004493",
+                        "on-surface": "#181c23",
+                        "on-background": "#181c23",
+                        "primary-container": "#0070ea"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "32px",
+                        "unit": "4px",
+                        "stack-lg": "32px",
+                        "gutter": "24px",
+                        "container-max-width": "1200px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px"
+                    },
+                    fontFamily: {
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    fontSize: {
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col pt-16 pb-20 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-inverse-surface fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 shadow-sm">
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-primary-fixed cursor-pointer active:opacity-80 p-2 hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">ServicePro</span>
+</div>
+<button class="text-on-surface-variant dark:text-outline-variant cursor-pointer active:opacity-80 p-2 hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg md:py-12 flex flex-col gap-stack-lg">
+<!-- Hero Search Section -->
+<section class="text-center bg-primary-fixed rounded-xl p-8 md:p-12 shadow-[0px_4px_12px_rgba(0,0,0,0.05)] relative overflow-hidden">
+<div class="relative z-10 max-w-2xl mx-auto flex flex-col gap-stack-md">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary-fixed">How can we help you?</h1>
+<p class="font-body-md text-body-md text-on-primary-fixed-variant">Search our knowledge base or browse categories below.</p>
+<div class="relative mt-4">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-full border border-outline-variant bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent font-body-md text-body-md text-on-surface shadow-sm transition-shadow hover:shadow-[0px_4px_12px_rgba(0,0,0,0.05)]" placeholder="Search for articles..." type="text"/>
+</div>
+</div>
+<!-- Decorative abstract shapes -->
+<div class="absolute top-0 left-0 w-64 h-64 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 right-0 w-64 h-64 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-20 translate-x-1/2 translate-y-1/2"></div>
+</section>
+<!-- Quick Access Categories (Bento Grid Style) -->
+<section>
+<h2 class="font-headline-sm text-headline-sm text-on-background mb-stack-md">Quick Categories</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-stack-md">
+<!-- Category Card -->
+<a class="bg-surface-container-lowest rounded-xl p-6 flex flex-col items-center justify-center gap-stack-sm shadow-[0px_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0px_8px_24px_rgba(0,0,0,0.08)] transition-all duration-200 border border-transparent hover:border-outline-variant group text-center h-full" href="#">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center text-primary mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface">Bookings</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant hidden md:block">Manage your reservations</p>
+</a>
+<!-- Category Card -->
+<a class="bg-surface-container-lowest rounded-xl p-6 flex flex-col items-center justify-center gap-stack-sm shadow-[0px_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0px_8px_24px_rgba(0,0,0,0.08)] transition-all duration-200 border border-transparent hover:border-outline-variant group text-center h-full" href="#">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center text-primary mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface">Payments</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant hidden md:block">Invoices &amp; billing</p>
+</a>
+<!-- Category Card -->
+<a class="bg-surface-container-lowest rounded-xl p-6 flex flex-col items-center justify-center gap-stack-sm shadow-[0px_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0px_8px_24px_rgba(0,0,0,0.08)] transition-all duration-200 border border-transparent hover:border-outline-variant group text-center h-full" href="#">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center text-primary mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface">Account</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant hidden md:block">Profile &amp; settings</p>
+</a>
+<!-- Category Card -->
+<a class="bg-surface-container-lowest rounded-xl p-6 flex flex-col items-center justify-center gap-stack-sm shadow-[0px_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0px_8px_24px_rgba(0,0,0,0.08)] transition-all duration-200 border border-transparent hover:border-outline-variant group text-center h-full" href="#">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center text-primary mb-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface">Safety</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant hidden md:block">Trust &amp; guidelines</p>
+</a>
+</div>
+</section>
+<!-- Trending Articles & Contact Layout -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+<!-- Trending Articles -->
+<section class="md:col-span-2 flex flex-col gap-stack-md">
+<h2 class="font-headline-sm text-headline-sm text-on-background flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+                    Trending Articles
+                </h2>
+<div class="flex flex-col gap-4">
+<!-- Article Item -->
+<a class="bg-surface-container-lowest rounded-xl p-4 md:p-6 flex items-start gap-4 shadow-[0px_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0px_8px_24px_rgba(0,0,0,0.08)] transition-shadow border-l-4 border-transparent hover:border-primary group" href="#">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors mt-1">article</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">How do I cancel or reschedule a booking?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2">Learn about our cancellation policy, how to reschedule directly through the app, and any potential fees involved.</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant ml-auto opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</a>
+<!-- Article Item -->
+<a class="bg-surface-container-lowest rounded-xl p-4 md:p-6 flex items-start gap-4 shadow-[0px_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0px_8px_24px_rgba(0,0,0,0.08)] transition-shadow border-l-4 border-transparent hover:border-primary group" href="#">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors mt-1">article</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">When will I receive my payout?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2">Detailed information on payout schedules for service providers, including direct deposit timelines and processing days.</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant ml-auto opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</a>
+<!-- Article Item -->
+<a class="bg-surface-container-lowest rounded-xl p-4 md:p-6 flex items-start gap-4 shadow-[0px_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0px_8px_24px_rgba(0,0,0,0.08)] transition-shadow border-l-4 border-transparent hover:border-primary group" href="#">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors mt-1">article</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">How do I reset my password?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-2">Step-by-step instructions for recovering access to your account if you've forgotten your login credentials.</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant ml-auto opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</a>
+</div>
+<button class="text-primary font-label-md text-label-md self-start hover:underline mt-2">View all articles</button>
+</section>
+<!-- Contact Support Section -->
+<section class="flex flex-col gap-stack-md">
+<h2 class="font-headline-sm text-headline-sm text-on-background">Still need help?</h2>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_4px_12px_rgba(0,0,0,0.05)] flex flex-col gap-stack-md h-full">
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Our support team is available 24/7 to assist you with any inquiries.</p>
+<button class="w-full flex items-center justify-between p-4 bg-primary text-on-primary rounded-xl hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm font-label-md text-label-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">chat</span>
+<span>Live Chat</span>
+</div>
+<span class="text-xs bg-white/20 px-2 py-1 rounded-full">Typically responds in minutes</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 border border-outline-variant text-on-surface rounded-xl hover:bg-surface-container-low transition-colors font-label-md text-label-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span>Email Support</span>
+</div>
+</button>
+<button class="w-full flex items-center justify-between p-4 border border-outline-variant text-on-surface rounded-xl hover:bg-surface-container-low transition-colors font-label-md text-label-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<span>Call Us</span>
+</div>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only, Hidden on MD) -->
+<nav class="bg-surface dark:bg-inverse-surface fixed bottom-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-safe rounded-t-xl shadow-[0px_-4px_12px_rgba(0,0,0,0.05)] md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-sm text-label-sm mt-1">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-sm text-label-sm mt-1">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 hover:text-primary dark:hover:text-primary-fixed transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

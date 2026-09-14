@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                        "text-light": "#111827",
+                        "text-dark": "#f3f4f6",
+                        "subtext-light": "#6b7280",
+                        "subtext-dark": "#9ca3af",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#374151"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .form-select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+        }
+        .dark .form-select {
+             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="p-2 text-text-light dark:text-text-dark">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+<h1 class="flex-1 text-lg font-bold text-center text-text-light dark:text-text-dark pr-10">Service Area &amp; Availability</h1>
+</div>
+<div class="w-full h-px bg-border-light dark:bg-border-dark"></div>
+</header>
+<main class="flex-1 px-4 py-6 space-y-8">
+<div class="text-center">
+<p class="text-subtext-light dark:text-subtext-dark">Define your service area and set your general availability to start receiving requests.</p>
+</div>
+<div class="space-y-6">
+<section>
+<h2 class="text-xl font-bold text-text-light dark:text-text-dark mb-4">Service Area</h2>
+<div class="w-full aspect-[4/3] bg-center bg-no-repeat bg-cover rounded-xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVAnxr23sL93aeQxKi2aOqqfDYerpzNQnoDRdPfgHSiW9VqKw4Tv1-9njx6Xd2_Rc55D9BP5XnILCfFPdhsSDBRe1jzbw6nF7V73D9xIMaLm2W--fvipd9TBPNoB8GHi8y9ttWp9uRWOC-dTF2TaEgSGyNiT09OzYnrixeH4XlJ-GuGcPpZqL6Yi_0Umvr1_Qm7kqI27S0Mc9YANx0ADs1HxOc1mtsm-KZo8fjLpRu-Pm5UkvQIdf27T2iyx8QaoPoizZ1kePyxjZT");'></div>
+<div class="mt-4">
+<label class="block text-sm font-medium text-text-light dark:text-text-dark mb-2" for="service-radius">Service Radius (in miles)</label>
+<input class="form-input w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark placeholder-subtext-light dark:placeholder-subtext-dark focus:ring-2 focus:ring-primary/50 focus:border-primary" id="service-radius" placeholder="e.g., 25" type="number"/>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold text-text-light dark:text-text-dark mb-4">Availability</h2>
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-text-light dark:text-text-dark mb-2" for="days-of-week">Days of the week</label>
+<select class="form-select w-full appearance-none rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark focus:ring-2 focus:ring-primary/50 focus:border-primary" id="days-of-week">
+<option>Weekdays (Mon-Fri)</option>
+<option>Weekends (Sat-Sun)</option>
+<option>Every day</option>
+<option>Custom...</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-light dark:text-text-dark mb-2" for="time-of-day">Time of day</label>
+<select class="form-select w-full appearance-none rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark focus:ring-2 focus:ring-primary/50 focus:border-primary" id="time-of-day">
+<option>Mornings (8am - 12pm)</option>
+<option>Afternoons (12pm - 5pm)</option>
+<option>Evenings (5pm - 9pm)</option>
+<option>All day</option>
+</select>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark p-4 border-t border-border-light dark:border-border-dark">
+<button class="w-full h-12 px-5 rounded-xl bg-primary text-white font-bold text-base tracking-wide flex items-center justify-center hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark transition-colors">
+                Continue
+            </button>
+</footer>
+</div>
+
+</body></html>

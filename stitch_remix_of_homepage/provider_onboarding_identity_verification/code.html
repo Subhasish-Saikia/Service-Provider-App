@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#13a4ec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            display: ["Manrope"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+<style type="text/tailwindcss">
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-black dark:text-white">
+<div class="flex flex-col min-h-screen">
+<header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark border-b border-black/10 dark:border-white/10">
+<button class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5">
+<span class="material-symbols-outlined"> arrow_back </span>
+</button>
+<h1 class="text-lg font-bold">Verify your identity</h1>
+<div class="w-10"></div>
+</header>
+<main class="flex-grow p-6 space-y-8">
+<div class="text-center">
+<h2 class="text-2xl font-bold">Confirm your identity</h2>
+<p class="mt-2 text-black/60 dark:text-white/60">To ensure the safety of our community, we need to verify your identity. This helps us maintain a trustworthy platform for both providers and customers.</p>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-black/80 dark:text-white/80" for="full-name">Full Legal Name</label>
+<input class="mt-1 block w-full px-4 py-3 bg-white/50 dark:bg-black/20 border border-black/10 dark:border-white/10 rounded-lg focus:ring-primary focus:border-primary placeholder-black/40 dark:placeholder-white/40" id="full-name" placeholder="Enter your full legal name" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-black/80 dark:text-white/80" for="ssn">Social Security Number</label>
+<input class="mt-1 block w-full px-4 py-3 bg-white/50 dark:bg-black/20 border border-black/10 dark:border-white/10 rounded-lg focus:ring-primary focus:border-primary placeholder-black/40 dark:placeholder-white/40" id="ssn" placeholder="Enter your SSN" type="password"/>
+</div>
+</div>
+<div class="flex items-start p-4 rounded-lg bg-primary/10 dark:bg-primary/20">
+<span class="material-symbols-outlined text-primary mr-3 mt-1"> security </span>
+<p class="text-sm text-primary/80 dark:text-primary/90">We use this information to conduct a background check and ensure the safety of our community. Your information is securely encrypted and will not be shared.</p>
+</div>
+</main>
+<footer class="p-4 bg-background-light dark:bg-background-dark border-t border-black/10 dark:border-white/10">
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 transition-colors">Continue</button>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Customer Payment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#13a4ec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            display: ["Manrope"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    .form-radio:checked {
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+      border-color: transparent;
+      background-color: #13a4ec;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex h-full min-h-screen w-full flex-col justify-between">
+<div>
+<header class="sticky top-0 z-10 bg-background-light/80 p-4 backdrop-blur-sm dark:bg-background-dark/80">
+<div class="relative flex items-center justify-center">
+<button class="absolute left-0 text-gray-600 dark:text-gray-400">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white">Payment</h1>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-4">
+<div class="mb-6 rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+<h2 class="mb-4 text-lg font-bold text-gray-900 dark:text-white">Order Summary</h2>
+<div class="space-y-2">
+<div class="flex justify-between text-gray-600 dark:text-gray-400">
+<span>Service Fee</span>
+<span>$150.00</span>
+</div>
+<div class="flex justify-between text-gray-600 dark:text-gray-400">
+<span>Taxes</span>
+<span>$12.00</span>
+</div>
+<div class="flex justify-between text-gray-600 dark:text-gray-400">
+<span>Discount</span>
+<span class="text-green-500">-$10.00</span>
+</div>
+<div class="my-2 border-t border-dashed border-gray-200 dark:border-gray-700"></div>
+<div class="flex justify-between text-lg font-bold text-gray-900 dark:text-white">
+<span>Total Amount</span>
+<span>$152.00</span>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Choose a payment method</h3>
+<div class="space-y-3">
+<div class="rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+<label class="flex items-center justify-between p-4 cursor-pointer">
+<div class="flex items-center space-x-3">
+<svg class="h-6 w-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5a.5.5 0 01-1 0v-5a.5.5 0 011 0v5zm3 0a.5.5 0 01-1 0V9a.5.5 0 011 0v7.5zM8 11h8M8 9h8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="font-medium text-gray-800 dark:text-gray-200">UPI</span>
+</div>
+<input class="form-radio h-5 w-5 border-gray-300 text-primary focus:ring-primary dark:border-gray-600" name="payment-method" type="radio"/>
+</label>
+</div>
+<div class="rounded-lg border border-primary bg-white dark:border-primary dark:bg-gray-800">
+<label class="flex items-center justify-between p-4 cursor-pointer">
+<div class="flex items-center space-x-3">
+<svg class="h-6 w-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="font-medium text-gray-800 dark:text-gray-200">Credit / Debit Card</span>
+</div>
+<input checked="" class="form-radio h-5 w-5 border-gray-300 text-primary focus:ring-primary dark:border-gray-600" name="payment-method" type="radio"/>
+</label>
+<div class="space-y-4 border-t border-gray-200 p-4 dark:border-gray-700">
+<input class="w-full rounded-lg border-gray-300 bg-gray-50 p-4 text-gray-900 placeholder-gray-400 focus:border-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500" placeholder="Card Number" type="text"/>
+<div class="flex space-x-4">
+<input class="w-1/2 rounded-lg border-gray-300 bg-gray-50 p-4 text-gray-900 placeholder-gray-400 focus:border-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500" placeholder="MM / YY" type="text"/>
+<input class="w-1/2 rounded-lg border-gray-300 bg-gray-50 p-4 text-gray-900 placeholder-gray-400 focus:border-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500" placeholder="CVV" type="text"/>
+</div>
+<input class="w-full rounded-lg border-gray-300 bg-gray-50 p-4 text-gray-900 placeholder-gray-400 focus:border-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500" placeholder="Name on Card" type="text"/>
+<div class="mt-4 flex items-start space-x-3 rounded-lg bg-primary/10 p-3 dark:bg-primary/20">
+<svg class="h-6 w-6 flex-shrink-0 text-primary" fill="currentColor" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,80H48a16,16,0,0,0-16,16v80a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80Zm0,96H48V96H208v80Zm-48-48a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h32A8,8,0,0,1,160,128Zm-8,24H120a8,8,0,0,0,0,16h32a8,8,0,0,0,0-16ZM48,64H208a8,8,0,0,0,0-16H48a8,8,0,0,0,0,16Z"></path>
+</svg>
+<p class="text-sm text-gray-700 dark:text-gray-300">Your card information is encrypted and secure.</p>
+</div>
+</div>
+</div>
+<label class="flex items-center justify-between rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800 cursor-pointer">
+<div class="flex items-center space-x-3">
+<svg class="h-6 w-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 7v10m16-10v10M4 14h16M4 10h16M4 7h16m-9 10h2m-2-3h2m-2-3h2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="font-medium text-gray-800 dark:text-gray-200">Net Banking</span>
+</div>
+<input class="form-radio h-5 w-5 border-gray-300 text-primary focus:ring-primary dark:border-gray-600" name="payment-method" type="radio"/>
+</label>
+<label class="flex items-center justify-between rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800 cursor-pointer">
+<div class="flex items-center space-x-3">
+<svg class="h-6 w-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="font-medium text-gray-800 dark:text-gray-200">Digital Wallets</span>
+</div>
+<input class="form-radio h-5 w-5 border-gray-300 text-primary focus:ring-primary dark:border-gray-600" name="payment-method" type="radio"/>
+</label>
+</div>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-background-light p-4 dark:bg-background-dark">
+<div class="flex items-center justify-between">
+<div class="text-left">
+<p class="text-sm text-gray-600 dark:text-gray-400">Total</p>
+<p class="text-xl font-bold text-gray-900 dark:text-white">$152.00</p>
+</div>
+<button class="flex-1 rounded-lg bg-primary py-4 text-base font-bold text-white shadow-lg shadow-primary/30 transition-transform duration-200 ease-in-out hover:scale-[1.02] ml-4">
+        Pay Now
+      </button>
+</div>
+</footer>
+</div>
+
+</body></html>

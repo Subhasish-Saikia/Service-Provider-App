@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Earnings &amp; Payouts - ServicePro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f1f3fe",
+                        "surface-dim": "#d7d9e5",
+                        "secondary-container": "#d8e1ea",
+                        "background": "#f9f9ff",
+                        "surface-container-highest": "#e0e2ed",
+                        "surface-container": "#ebedf9",
+                        "error-container": "#ffdad6",
+                        "primary": "#0059bb",
+                        "secondary": "#575f67",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#bfc8d0",
+                        "surface": "#f9f9ff",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3039",
+                        "on-tertiary-fixed-variant": "#7c2e00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "outline-variant": "#c1c6d7",
+                        "surface-variant": "#e0e2ed",
+                        "surface-container-high": "#e6e8f3",
+                        "inverse-on-surface": "#eef0fb",
+                        "primary-fixed-dim": "#adc7ff",
+                        "tertiary-container": "#c64f00",
+                        "surface-tint": "#005bc0",
+                        "on-tertiary-fixed": "#351000",
+                        "inverse-primary": "#adc7ff",
+                        "secondary-fixed": "#dbe4ed",
+                        "on-secondary-fixed-variant": "#3f484f",
+                        "tertiary": "#9e3d00",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d8e2ff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-bright": "#f9f9ff",
+                        "outline": "#717786",
+                        "on-primary-container": "#fefcff",
+                        "on-secondary-container": "#5b646b",
+                        "on-surface-variant": "#414754",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001a41",
+                        "on-secondary-fixed": "#141d23",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#004493",
+                        "on-surface": "#181c23",
+                        "on-background": "#181c23",
+                        "primary-container": "#0070ea"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "32px",
+                        "unit": "4px",
+                        "stack-lg": "32px",
+                        "gutter": "24px",
+                        "container-max-width": "1200px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9ff; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.filled { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased md:pl-80 pt-16 md:pt-0 pb-24 md:pb-0 min-h-screen">
+<!-- TopAppBar (Mobile Only) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 bg-surface dark:bg-inverse-surface shadow-sm md:hidden">
+<button class="text-primary dark:text-primary-fixed cursor-pointer active:opacity-80 p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">ServicePro</h1>
+<button class="text-primary dark:text-primary-fixed cursor-pointer active:opacity-80 p-2">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- NavigationDrawer (Desktop Only) -->
+<aside class="hidden md:flex fixed left-0 top-0 h-full w-80 rounded-r-xl z-[60] flex-col p-4 bg-surface dark:bg-inverse-surface shadow-lg">
+<div class="flex items-center gap-4 mb-stack-lg p-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A professional headshot of a service provider. The individual is looking confidently at the camera with a friendly smile, dressed in clean, functional work attire suitable for a plumber. The background is a brightly lit, clean modern space, emphasizing a professional and reliable image." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkNY6VloM7vkeUjIKJDUDO9kKDExfC42aoy42NZmNaBXElrR32vuxTuESsTsbTbykL1AE0BhWP9qm8eGk_g7iFavPJ_bYezIaX3s4oCiVwZMes7ah8Ja6T2Ty_1_hPNDNvIqNUWBPGSMv-sCv4vnNTUY1dER6kf-Eu0DLsRUpK7OEWDUfQ8Joacwe61bxUei-11Fa3W_Uchpqw8BOTtfrh03k9eZsD6Zh0TDdb4U0MGsOdqfd7RCI"/>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Alex Provider</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Professional Plumber</p>
+<p class="font-label-sm text-label-sm text-primary mt-1">Rating: 4.9 <span class="material-symbols-outlined filled text-[14px] align-middle">star</span></p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-150" href="#">
+<span class="material-symbols-outlined">construction</span>
+<span class="font-label-md text-label-md">My Services</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold transition-all duration-150" href="#">
+<span class="material-symbols-outlined filled">payments</span>
+<span class="font-label-md text-label-md">Earnings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-150" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-150 mt-auto" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-md text-label-md">Help</span>
+</a>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg md:py-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-stack-lg gap-4">
+<div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Earnings &amp; Payouts</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Manage your revenue and request withdrawals.</p>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-md text-label-md px-6 py-3 rounded-full shadow-[0px_4px_12px_rgba(0,0,0,0.05)] transition-colors flex items-center gap-2 w-full md:w-auto justify-center">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+                Request Payout
+            </button>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-stack-lg">
+<!-- Balance Card -->
+<div class="md:col-span-1 bg-surface-container-lowest rounded-xl p-stack-md shadow-[0px_4px_12px_rgba(0,0,0,0.05)] flex flex-col justify-between border border-surface-variant">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+<h2 class="font-label-md text-label-md text-on-surface-variant">Current Balance</h2>
+</div>
+<p class="font-display-lg text-display-lg text-on-surface">$1,245.50</p>
+</div>
+<div class="mt-stack-md">
+<p class="font-label-sm text-label-sm text-secondary-fixed-dim">Available for immediate withdrawal.</p>
+</div>
+</div>
+<!-- Month Earned Card -->
+<div class="md:col-span-1 bg-surface-container-lowest rounded-xl p-stack-md shadow-[0px_4px_12px_rgba(0,0,0,0.05)] flex flex-col justify-between border border-surface-variant">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+<h2 class="font-label-md text-label-md text-on-surface-variant">Earned This Month</h2>
+</div>
+<p class="font-headline-lg text-headline-lg text-on-surface">$3,450.00</p>
+</div>
+<div class="mt-stack-md flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+<p class="font-label-sm text-label-sm">12% increase from last month</p>
+</div>
+</div>
+<!-- Chart Card -->
+<div class="md:col-span-3 lg:col-span-1 bg-surface-container-lowest rounded-xl p-stack-md shadow-[0px_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant h-64">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">bar_chart</span>
+<h2 class="font-label-md text-label-md text-on-surface-variant">Last 7 Days</h2>
+</div>
+<div class="relative w-full h-[calc(100%-2rem)]">
+<canvas id="earningsChart"></canvas>
+</div>
+</div>
+</div>
+<!-- Recent Transactions -->
+<div class="bg-surface-container-lowest rounded-xl p-stack-md md:p-stack-lg shadow-[0px_4px_12px_rgba(0,0,0,0.05)] border border-surface-variant">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-md">Recent Transactions</h2>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-variant">
+<th class="font-label-sm text-label-sm text-on-surface-variant pb-2 font-medium">Service Date</th>
+<th class="font-label-sm text-label-sm text-on-surface-variant pb-2 font-medium">Customer</th>
+<th class="font-label-sm text-label-sm text-on-surface-variant pb-2 font-medium">Service</th>
+<th class="font-label-sm text-label-sm text-on-surface-variant pb-2 font-medium text-right">Net Earnings</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-surface-variant/50 hover:bg-surface-container-low transition-colors">
+<td class="py-4 font-body-md text-body-md text-on-surface">Oct 24, 2023</td>
+<td class="py-4 font-body-md text-body-md text-on-surface">Sarah Jenkins</td>
+<td class="py-4">
+<span class="inline-flex items-center bg-[#E7F1FF] text-primary px-2 py-1 rounded-[8px] font-label-sm text-label-sm">Emergency Plumbing</span>
+</td>
+<td class="py-4 font-body-md text-body-md text-on-surface text-right font-medium">+$150.00</td>
+</tr>
+<tr class="border-b border-surface-variant/50 hover:bg-surface-container-low transition-colors">
+<td class="py-4 font-body-md text-body-md text-on-surface">Oct 22, 2023</td>
+<td class="py-4 font-body-md text-body-md text-on-surface">Michael Scott</td>
+<td class="py-4">
+<span class="inline-flex items-center bg-[#E7F1FF] text-primary px-2 py-1 rounded-[8px] font-label-sm text-label-sm">Pipe Repair</span>
+</td>
+<td class="py-4 font-body-md text-body-md text-on-surface text-right font-medium">+$85.00</td>
+</tr>
+<tr class="border-b border-surface-variant/50 hover:bg-surface-container-low transition-colors">
+<td class="py-4 font-body-md text-body-md text-on-surface">Oct 20, 2023</td>
+<td class="py-4 font-body-md text-body-md text-on-surface">Jim Halpert</td>
+<td class="py-4">
+<span class="inline-flex items-center bg-[#E7F1FF] text-primary px-2 py-1 rounded-[8px] font-label-sm text-label-sm">Faucet Install</span>
+</td>
+<td class="py-4 font-body-md text-body-md text-on-surface text-right font-medium">+$120.00</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-4 font-body-md text-body-md text-on-surface">Oct 18, 2023</td>
+<td class="py-4 font-body-md text-body-md text-on-surface">Pam Beesly</td>
+<td class="py-4">
+<span class="inline-flex items-center bg-[#E7F1FF] text-primary px-2 py-1 rounded-[8px] font-label-sm text-label-sm">Drain Cleaning</span>
+</td>
+<td class="py-4 font-body-md text-body-md text-on-surface text-right font-medium">+$95.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button class="mt-stack-md w-full py-3 text-center text-primary font-label-md text-label-md hover:bg-surface-container rounded-lg transition-colors">
+                View All Transactions
+            </button>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-safe bg-surface dark:bg-inverse-surface shadow-[0px_-4px_12px_rgba(0,0,0,0.05)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm mt-1">Dash</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 hover:text-primary dark:hover:text-primary-fixed transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined filled">payments</span>
+<span class="font-label-sm text-label-sm mt-1">Earnings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-sm text-label-sm mt-1">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-all active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</nav>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('earningsChart').getContext('2d');
+            
+            const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+            gradient.addColorStop(0, 'rgba(0, 89, 187, 0.8)');
+            gradient.addColorStop(1, 'rgba(0, 89, 187, 0.2)');
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [{
+                        label: 'Earnings',
+                        data: [120, 190, 80, 250, 150, 300, 210],
+                        backgroundColor: gradient,
+                        borderRadius: 4,
+                        borderSkipped: false,
+                        barPercentage: 0.6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: '#2d3039',
+                            titleFont: { family: 'Inter', size: 12 },
+                            bodyFont: { family: 'Inter', size: 14, weight: 'bold' },
+                            padding: 10,
+                            displayColors: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return '$' + context.raw;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#e0e2ed',
+                                drawBorder: false,
+                            },
+                            ticks: {
+                                font: { family: 'Inter', size: 10 },
+                                color: '#717786',
+                                callback: function(value) { return '$' + value; }
+                            }
+                        },
+                        x: {
+                            grid: { display: false, drawBorder: false },
+                            ticks: {
+                                font: { family: 'Inter', size: 12 },
+                                color: '#717786'
+                            }
+                        }
+                    },
+                    animation: {
+                        y: {
+                            duration: 1000,
+                            easing: 'easeOutQuart'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body></html>

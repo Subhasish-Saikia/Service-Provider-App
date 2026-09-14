@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                        "content-light": "#111827",
+                        "content-dark": "#e5e7eb",
+                        "subtle-light": "#6b7280",
+                        "subtle-dark": "#9ca3af",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#374151"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-content-light dark:text-content-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-border-light dark:border-border-dark">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between h-16">
+<button class="p-2 -ml-2">
+<svg class="text-content-light dark:text-content-dark" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+</svg>
+</button>
+<h1 class="text-lg font-bold">Book</h1>
+<div class="w-6"></div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 py-6">
+<h2 class="text-2xl font-bold mb-4">Select date and time</h2>
+<div class="overflow-x-auto snap-x snap-mandatory flex gap-4 pb-4">
+<div class="snap-center shrink-0 w-[calc(100%-2rem)]">
+<div class="bg-background-light dark:bg-background-dark rounded-lg">
+<div class="flex items-center justify-between p-4">
+<button class="p-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+</button>
+<p class="font-bold text-center">May 2024</p>
+<div class="w-8"></div>
+</div>
+<div class="grid grid-cols-7 text-center text-sm">
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">S</div>
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">M</div>
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">T</div>
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">W</div>
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">T</div>
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">F</div>
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">S</div>
+</div>
+<div class="grid grid-cols-7 text-center p-2">
+<div class="col-start-4"></div>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">1</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">2</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">3</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">4</button>
+<button class="h-10 w-10 mx-auto rounded-full bg-primary text-white">5</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">6</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">7</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">8</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">9</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">10</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">11</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">12</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">13</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">14</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">15</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">16</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">17</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">18</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">19</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">20</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">21</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">22</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">23</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">24</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">25</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">26</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">27</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">28</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">29</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">30</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">31</button>
+</div>
+</div>
+</div>
+<div class="snap-center shrink-0 w-[calc(100%-2rem)]">
+<div class="bg-background-light dark:bg-background-dark rounded-lg">
+<div class="flex items-center justify-between p-4">
+<div class="w-8"></div>
+<p class="font-bold text-center">June 2024</p>
+<button class="p-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+</button>
+</div>
+<div class="grid grid-cols-7 text-center text-sm">
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">S</div>
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">M</div>
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">T</div>
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">W</div>
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">T</div>
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">F</div>
+<div class="py-2 text-subtle-light dark:text-subtle-dark font-medium">S</div>
+</div>
+<div class="grid grid-cols-7 text-center p-2">
+<div class="col-start-7"></div>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">1</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">2</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">3</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">4</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">5</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">6</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">7</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">8</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">9</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">10</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">11</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">12</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">13</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">14</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">15</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">16</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">17</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">18</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">19</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">20</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">21</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">22</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">23</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">24</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">25</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">26</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">27</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">28</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">29</button>
+<button class="h-10 w-10 mx-auto rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">30</button>
+</div>
+</div>
+</div>
+</div>
+<h2 class="text-xl font-bold my-4">Available times</h2>
+<div class="flex flex-wrap gap-3">
+<button class="px-4 py-2 rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary font-medium">9:00 AM</button>
+<button class="px-4 py-2 rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary font-medium">10:00 AM</button>
+<button class="px-4 py-2 rounded-lg bg-primary text-white font-medium">11:00 AM</button>
+<button class="px-4 py-2 rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary font-medium">1:00 PM</button>
+<button class="px-4 py-2 rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary font-medium">2:00 PM</button>
+<button class="px-4 py-2 rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary font-medium">3:00 PM</button>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark pb-safe">
+<div class="container mx-auto px-4 py-4">
+<button class="w-full bg-primary text-white font-bold py-3 px-5 rounded-lg h-12">Continue</button>
+</div>
+<div class="border-t border-border-light dark:border-border-dark">
+<div class="container mx-auto px-4 pt-2 pb-4">
+<div class="flex justify-around items-start">
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<svg class="text-subtle-light dark:text-subtle-dark" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"></path></svg>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<svg class="text-subtle-light dark:text-subtle-dark" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+<span class="text-xs font-medium">Search</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary dark:text-primary" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M184,32H72A16,16,0,0,0,56,48V224a8,8,0,0,0,12.24,6.78L128,193.43l59.77,37.35A8,8,0,0,0,200,224V48A16,16,0,0,0,184,32Z"></path></svg>
+<span class="text-xs font-bold">Bookings</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark" href="#">
+<svg class="text-subtle-light dark:text-subtle-dark" fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path></svg>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

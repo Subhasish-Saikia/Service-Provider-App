@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Completion OTP Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0684f9",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                        "foreground-light": "#0d151c",
+                        "foreground-dark": "#f5f7f8",
+                        "subtle-light": "#6b7280", // Updated from #47749e to gray-500
+                        "subtle-dark": "#9ca3af", // Updated from #a1c2e0 to gray-400
+                        "border-light": "#e5e7eb", // Updated from #cedce9 to gray-200
+                        "border-dark": "#374151", // Updated from #2a3f53 to gray-700
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            min-height: 100dvh;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="p-2 -ml-2">
+<span class="material-symbols-outlined text-foreground-light dark:text-foreground-dark">arrow_back</span>
+</button>
+<h1 class="flex-1 text-lg font-bold text-center">Confirm Completion</h1>
+<div class="w-8"></div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center justify-center p-4 text-center">
+<div class="w-full max-w-sm">
+<div class="mb-8">
+<div class="flex justify-center items-center mb-6">
+<div class="p-4 rounded-full bg-primary/10">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1, 'wght' 600">phonelink_lock</span>
+</div>
+</div>
+<h2 class="text-2xl font-bold text-foreground-light dark:text-foreground-dark mb-2">Enter OTP</h2>
+<p class="text-subtle-light dark:text-subtle-dark">An OTP has been sent to the customer's mobile number. Please enter it below to confirm job completion.</p>
+</div>
+<div class="mb-8">
+<label class="sr-only" for="otp">Enter OTP</label>
+<div class="flex justify-center gap-2 sm:gap-4">
+<input class="w-14 h-14 text-center text-2xl font-bold rounded-lg border-2 border-border-light dark:border-border-dark bg-background-light dark:bg-zinc-800 focus:ring-primary focus:border-primary" maxlength="1" type="text"/>
+<input class="w-14 h-14 text-center text-2xl font-bold rounded-lg border-2 border-border-light dark:border-border-dark bg-background-light dark:bg-zinc-800 focus:ring-primary focus:border-primary" maxlength="1" type="text"/>
+<input class="w-14 h-14 text-center text-2xl font-bold rounded-lg border-2 border-border-light dark:border-border-dark bg-background-light dark:bg-zinc-800 focus:ring-primary focus:border-primary" maxlength="1" type="text"/>
+<input class="w-14 h-14 text-center text-2xl font-bold rounded-lg border-2 border-border-light dark:border-border-dark bg-background-light dark:bg-zinc-800 focus:ring-primary focus:border-primary" maxlength="1" type="text"/>
+</div>
+</div>
+<div class="mb-8">
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Didn't receive the OTP?</p>
+<button class="text-sm font-semibold text-primary">Resend OTP</button>
+</div>
+<div class="mt-auto">
+<button class="w-full py-4 px-4 bg-primary text-white font-bold rounded-lg text-center flex items-center justify-center gap-2 shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined">check_circle</span>
+<span>Confirm Completion</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

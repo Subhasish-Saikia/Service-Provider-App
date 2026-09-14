@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Message List / Inbox</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0684f9",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                        "foreground-light": "#0d151c",
+                        "foreground-dark": "#f5f7f8",
+                        "subtle-light": "#47749e",
+                        "subtle-dark": "#a1c2e0",
+                        "border-light": "#cedce9",
+                        "border-dark": "#2a3f53",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
+<div class="flex flex-col h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="p-4 border-b border-border-light dark:border-border-dark">
+<div class="flex justify-between items-center">
+<button class="p-2 -ml-2">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold">Messages</h1>
+<button class="p-2 -mr-2">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="mt-4 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-subtle-light dark:text-subtle-dark">search</span>
+<input class="w-full bg-white dark:bg-zinc-800 border-border-light dark:border-border-dark rounded-full py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-primary text-sm" placeholder="Search messages" type="text"/>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<div class="divide-y divide-border-light dark:divide-border-dark">
+<div class="p-4 flex items-start gap-4 hover:bg-zinc-100 dark:hover:bg-zinc-800 cursor-pointer">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCemW0W6s9klXdr57WVvPq1u9VQ2-U70LQZLvVB8W0MGgy212Rm-3T3sRejUDtWvn3sQzvpxtLZB77ofTdJqoscbweKiY8LZY7CdNDOzO6EXCwHgkB7XXxAf5pFwZ5RkeZkpTeQ9IfpeKWnXY3iB3PkTdDLjZVrcoRNsHMQmngexDxWwntJXx52XT0An7cqXbnY_GnIngtCXkWJMIT3ZgfuIJgTQK_uCg1l5UQmEc3GqjV5L9ApezFoh1idD0I2mq_Q2pX_v8uoXdd1");'></div>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-green-500 border-2 border-background-light dark:border-background-dark"></span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-bold text-base">Eleanor Pena</h2>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Booking: Haircut</p>
+</div>
+<span class="text-xs text-subtle-light dark:text-subtle-dark">10:09 AM</span>
+</div>
+<div class="flex justify-between items-end mt-1">
+<p class="text-sm text-subtle-light dark:text-subtle-dark truncate w-10/12">Perfect! That works for me. Thanks for being so flexible.</p>
+</div>
+</div>
+</div>
+<div class="p-4 flex items-start gap-4 hover:bg-zinc-100 dark:hover:bg-zinc-800 cursor-pointer">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCc4iEjODnTexUXrSYP7uwwiltm2ocktteLldVje1c8fpPSn2xG2w4u31fG0FiIHKVh9A4FjAFSN8nVqd3_ZJNoezNvpDckg3MoUyOnIu2XLEQvZQoopKXOA3JC5axD9OCIwizq3coi_-bMG2TIgktasO9KIBLRYYdNSFLWa4MkMnbk95Ei5IPgbyrtDzxurUGjU78ZCScMTdE7iDbzXTYpMfA3ooUe7sLXNgfA3RISR9hpyRYRK0vXd98E21XcFydJvw3-j2Wzy6cu");'></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-bold text-base">Jacob Jones</h2>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Booking: Men's Fade</p>
+</div>
+<span class="text-xs font-bold text-primary">Yesterday</span>
+</div>
+<div class="flex justify-between items-end mt-1">
+<p class="text-sm text-foreground-light dark:text-foreground-dark font-bold truncate w-10/12">Yes, that's correct. Looking forward to it!</p>
+<span class="w-3 h-3 bg-primary rounded-full flex-shrink-0"></span>
+</div>
+</div>
+</div>
+<div class="p-4 flex items-start gap-4 hover:bg-zinc-100 dark:hover:bg-zinc-800 cursor-pointer">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCc4iEjODnTexUXrSYP7uwwiltm2ocktteLldVje1c8fpPSn2xG2w4u31fG0FiIHKVh9A4FjAFSN8nVqd3_ZJNoezNvpDckg3MoUyOnIu2XLEQvZQoopKXOA3JC5axD9OCIwizq3coi_-bMG2TIgktasO9KIBLRYYdNSFLWa4MkMnbk95Ei5IPgbyrtDzxurUGjU78ZCScMTdE7iDbzXTYpMfA3ooUe7sLXNgfA3RISR9hpyRYRK0vXd98E21XcFydJvw3-j2Wzy6cu");'></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-bold text-base">Jenny Wilson</h2>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Booking: Color &amp; Highlights</p>
+</div>
+<span class="text-xs font-bold text-primary">Yesterday</span>
+</div>
+<div class="flex justify-between items-end mt-1">
+<p class="text-sm text-foreground-light dark:text-foreground-dark font-bold truncate w-10/12">Thank you so much! I love my new hair.</p>
+<span class="w-3 h-3 bg-primary rounded-full flex-shrink-0"></span>
+</div>
+</div>
+</div>
+<div class="p-4 flex items-start gap-4 hover:bg-zinc-100 dark:hover:bg-zinc-800 cursor-pointer">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCc4iEjODnTexUXrSYP7uwwiltm2ocktteLldVje1c8fpPSn2xG2w4u31fG0FiIHKVh9A4FjAFSN8nVqd3_ZJNoezNvpDckg3MoUyOnIu2XLEQvZQoopKXOA3JC5axD9OCIwizq3coi_-bMG2TIgktasO9KIBLRYYdNSFLWa4MkMnbk95Ei5IPgbyrtDzxurUGjU78ZCScMTdE7iDbzXTYpMfA3ooUe7sLXNgfA3RISR9hpyRYRK0vXd98E21XcFydJvw3-j2Wzy6cu");'></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-bold text-base">Cody Fisher</h2>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Booking: Beard Trim</p>
+</div>
+<span class="text-xs text-subtle-light dark:text-subtle-dark">Sun</span>
+</div>
+<div class="flex justify-between items-end mt-1">
+<p class="text-sm text-subtle-light dark:text-subtle-dark truncate w-10/12">Can I reschedule for next week?</p>
+</div>
+</div>
+</div>
+<div class="p-4 flex items-start gap-4 hover:bg-zinc-100 dark:hover:bg-zinc-800 cursor-pointer">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCc4iEjODnTexUXrSYP7uwwiltm2ocktteLldVje1c8fpPSn2xG2w4u31fG0FiIHKVh9A4FjAFSN8nVqd3_ZJNoezNvpDckg3MoUyOnIu2XLEQvZQoopKXOA3JC5axD9OCIwizq3coi_-bMG2TIgktasO9KIBLRYYdNSFLWa4MkMnbk95Ei5IPgbyrtDzxurUGjU78ZCScMTdE7iDbzXTYpMfA3ooUe7sLXNgfA3RISR9hpyRYRK0vXd98E21XcFydJvw3-j2Wzy6cu");'></div>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-green-500 border-2 border-background-light dark:border-background-dark"></span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-bold text-base">Esther Howard</h2>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Booking: Bridal Updo Trial</p>
+</div>
+<span class="text-xs text-subtle-light dark:text-subtle-dark">Sat</span>
+</div>
+<div class="flex justify-between items-end mt-1">
+<p class="text-sm text-subtle-light dark:text-subtle-dark truncate w-10/12">You're welcome! See you then.</p>
+</div>
+</div>
+</div>
+<div class="p-4 flex items-start gap-4 hover:bg-zinc-100 dark:hover:bg-zinc-800 cursor-pointer">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCc4iEjODnTexUXrSYP7uwwiltm2ocktteLldVje1c8fpPSn2xG2w4u31fG0FiIHKVh9A4FjAFSN8nVqd3_ZJNoezNvpDckg3MoUyOnIu2XLEQvZQoopKXOA3JC5axD9OCIwizq3coi_-bMG2TIgktasO9KIBLRYYdNSFLWa4MkMnbk95Ei5IPgbyrtDzxurUGjU78ZCScMTdE7iDbzXTYpMfA3ooUe7sLXNgfA3RISR9hpyRYRK0vXd98E21XcFydJvw3-j2Wzy6cu");'></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-bold text-base">Cameron Williamson</h2>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Booking: Kids Haircut</p>
+</div>
+<span class="text-xs text-subtle-light dark:text-subtle-dark">Fri</span>
+</div>
+<div class="flex justify-between items-end mt-1">
+<p class="text-sm text-subtle-light dark:text-subtle-dark truncate w-10/12">Okay, thanks for letting me know!</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark p-4 border-t border-border-light dark:border-border-dark">
+<div class="flex justify-around">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="text-xs font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs">Search</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-xs">Bookings</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-subtle-light dark:text-subtle-dark">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs">Profile</span>
+</button>
+</div>
+</footer>
+</div>
+
+</body></html>

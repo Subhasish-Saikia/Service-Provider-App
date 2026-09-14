@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ServicePro - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#f1f3fe",
+                      "surface-dim": "#d7d9e5",
+                      "secondary-container": "#d8e1ea",
+                      "background": "#f9f9ff",
+                      "surface-container-highest": "#e0e2ed",
+                      "surface-container": "#ebedf9",
+                      "error-container": "#ffdad6",
+                      "primary": "#0059bb",
+                      "secondary": "#575f67",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#bfc8d0",
+                      "surface": "#f9f9ff",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#2d3039",
+                      "on-tertiary-fixed-variant": "#7c2e00",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#fffbff",
+                      "outline-variant": "#c1c6d7",
+                      "surface-variant": "#e0e2ed",
+                      "surface-container-high": "#e6e8f3",
+                      "inverse-on-surface": "#eef0fb",
+                      "primary-fixed-dim": "#adc7ff",
+                      "tertiary-container": "#c64f00",
+                      "surface-tint": "#005bc0",
+                      "on-tertiary-fixed": "#351000",
+                      "inverse-primary": "#adc7ff",
+                      "secondary-fixed": "#dbe4ed",
+                      "on-secondary-fixed-variant": "#3f484f",
+                      "tertiary": "#9e3d00",
+                      "tertiary-fixed-dim": "#ffb695",
+                      "on-tertiary": "#ffffff",
+                      "primary-fixed": "#d8e2ff",
+                      "tertiary-fixed": "#ffdbcc",
+                      "surface-bright": "#f9f9ff",
+                      "outline": "#717786",
+                      "on-primary-container": "#fefcff",
+                      "on-secondary-container": "#5b646b",
+                      "on-surface-variant": "#414754",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#001a41",
+                      "on-secondary-fixed": "#141d23",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#004493",
+                      "on-surface": "#181c23",
+                      "on-background": "#181c23",
+                      "primary-container": "#0070ea"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "margin-desktop": "32px",
+                      "unit": "4px",
+                      "stack-lg": "32px",
+                      "gutter": "24px",
+                      "container-max-width": "1200px",
+                      "stack-md": "16px",
+                      "stack-sm": "8px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-sm": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "headline-lg-mobile": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "headline-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                      "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                      "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                      "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                      "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                      "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Toggle Switch Styles */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #0059bb; /* primary */
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #0059bb; /* primary */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md h-full flex flex-col md:flex-row antialiased">
+<!-- TopAppBar (Mobile Only in this Layout) -->
+<header class="md:hidden fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile h-16 bg-surface dark:bg-inverse-surface shadow-sm">
+<button class="text-on-surface-variant dark:text-outline-variant cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">ServicePro</div>
+<button class="text-on-surface-variant dark:text-outline-variant cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<!-- NavigationDrawer (Desktop) -->
+<nav class="hidden md:flex fixed left-0 top-0 h-full z-[60] flex flex-col p-4 w-80 rounded-r-xl bg-surface dark:bg-inverse-surface shadow-lg">
+<!-- Header Profile -->
+<div class="flex items-center gap-4 mb-8 p-2">
+<img class="w-16 h-16 rounded-full object-cover border-2 border-surface-container-high" data-alt="A professional headshot of a service provider smiling confidently. The individual is wearing clean, modern workwear against a bright, airy background, conveying trust and reliability in a high-end service marketplace setting. Professional studio lighting with a clean white and light blue color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjQOP1uQlIGq9TTLWrkgCHcAXZ9a9Hm7LunrEJJOIyjQgdDRqq_a_n75E-VirlJchQfXBtA9jyblLU4GSUepuiD9-BtJ9bVwz_VBkzAnaQXdKfRcO_XHRwVDUp5bO0CBB5whv0EgBPYejF4ZjLS5DYH--byiE9Zn4uJ0Eo-ECzUVhT7sQ1eSp5kt-TNVX__JAoj_7haSbaix8MpXDRigAjQ0p8xXSIAxF_iFRPEniwQtF1ej1EPdY"/>
+<div class="flex flex-col text-left">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Alex Provider</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Professional Plumber</span>
+<span class="font-label-sm text-label-sm text-primary font-medium mt-1">Rating: 4.9</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<ul class="flex flex-col gap-2 flex-grow">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-150 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-150 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="construction">construction</span>
+                    My Services
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-150 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+                    Earnings
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold transition-all duration-150 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings" data-weight="fill">settings</span>
+                    Settings
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-all duration-150 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                    Help
+                </a>
+</li>
+</ul>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 mt-16 md:mt-0 md:ml-80 p-margin-mobile md:p-margin-desktop bg-background pb-24 md:pb-8 overflow-y-auto">
+<div class="max-w-[800px] mx-auto w-full">
+<header class="mb-stack-lg">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">Settings</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-stack-sm">Manage your account preferences and app settings.</p>
+</header>
+<div class="flex flex-col gap-stack-lg">
+<!-- Profile Section -->
+<section class="bg-surface rounded-xl shadow-[0px_4px_12px_rgba(0,0,0,0.05)] overflow-hidden">
+<div class="px-4 py-3 border-b border-surface-variant bg-surface-container-low">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Account</h2>
+</div>
+<ul class="flex flex-col">
+<li class="border-b border-surface-variant last:border-0 hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Profile Information</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Update your name, email, and photo</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+</li>
+</ul>
+</section>
+<!-- Security Section -->
+<section class="bg-surface rounded-xl shadow-[0px_4px_12px_rgba(0,0,0,0.05)] overflow-hidden">
+<div class="px-4 py-3 border-b border-surface-variant bg-surface-container-low">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Security</h2>
+</div>
+<ul class="flex flex-col">
+<li class="border-b border-surface-variant last:border-0 hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Change Password</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+</li>
+<li class="border-b border-surface-variant last:border-0 hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Two-Factor Authentication</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Currently enabled</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+</li>
+</ul>
+</section>
+<!-- Notifications Section -->
+<section class="bg-surface rounded-xl shadow-[0px_4px_12px_rgba(0,0,0,0.05)] overflow-hidden">
+<div class="px-4 py-3 border-b border-surface-variant bg-surface-container-low">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Notifications</h2>
+</div>
+<ul class="flex flex-col">
+<li class="border-b border-surface-variant last:border-0 p-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Push Notifications</p>
+</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer" id="toggle-push" name="toggle-push" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-variant cursor-pointer" for="toggle-push"></label>
+</div>
+</div>
+</li>
+<li class="border-b border-surface-variant last:border-0 p-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Email Notifications</p>
+</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer" id="toggle-email" name="toggle-email" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-variant cursor-pointer" for="toggle-email"></label>
+</div>
+</div>
+</li>
+<li class="border-b border-surface-variant last:border-0 p-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="sms">sms</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">SMS Notifications</p>
+</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer" id="toggle-sms" name="toggle-sms" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-variant cursor-pointer" for="toggle-sms"></label>
+</div>
+</div>
+</li>
+</ul>
+</section>
+<!-- Preferences Section -->
+<section class="bg-surface rounded-xl shadow-[0px_4px_12px_rgba(0,0,0,0.05)] overflow-hidden">
+<div class="px-4 py-3 border-b border-surface-variant bg-surface-container-low">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Preferences</h2>
+</div>
+<ul class="flex flex-col">
+<li class="border-b border-surface-variant last:border-0 hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Language</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md text-on-surface-variant">English</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</li>
+<li class="border-b border-surface-variant last:border-0 p-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Dark Mode</p>
+</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer" id="toggle-dark" name="toggle-dark" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-variant cursor-pointer" for="toggle-dark"></label>
+</div>
+</div>
+</li>
+</ul>
+</section>
+<!-- About Section -->
+<section class="bg-surface rounded-xl shadow-[0px_4px_12px_rgba(0,0,0,0.05)] overflow-hidden">
+<div class="px-4 py-3 border-b border-surface-variant bg-surface-container-low">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">About</h2>
+</div>
+<ul class="flex flex-col">
+<li class="border-b border-surface-variant last:border-0 hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="policy">policy</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Privacy Policy</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+</li>
+<li class="border-b border-surface-variant last:border-0 hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Terms of Service</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+</li>
+</ul>
+</section>
+<div class="flex justify-center mt-stack-md">
+<button class="font-label-md text-label-md text-error hover:text-on-error-container transition-colors py-2 px-4 rounded-lg">
+                        Log Out
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-safe bg-surface dark:bg-inverse-surface shadow-[0px_-4px_12px_rgba(0,0,0,0.05)] rounded-t-xl">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined font-label-sm text-label-sm" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined font-label-sm text-label-sm" data-icon="search">search</span>
+<span class="font-label-sm text-label-sm mt-1">Search</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined font-label-sm text-label-sm" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-sm text-label-sm mt-1">Bookings</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 active:scale-95 duration-200">
+<span class="material-symbols-outlined font-label-sm text-label-sm" data-icon="person" data-weight="fill">person</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</button>
+</nav>
+<script>
+        // Simple toggle interactions for checkboxes to animate visual state
+        document.querySelectorAll('.toggle-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                // Style handled via CSS above, this is just a hook if JS logic is needed later
+                console.log(this.id, 'toggled to', this.checked);
+            });
+        });
+    </script>
+</body></html>

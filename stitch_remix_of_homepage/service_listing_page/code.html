@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Service Listing</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0684f9",
+            "background-light": "#f5f7f8",
+            "background-dark": "#0f1923",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div class="flex-grow">
+<header class="sticky top-0 z-10 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="text-slate-800 dark:text-white">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-slate-900 dark:text-white pr-8">Plumbers</h1>
+</div>
+<div class="px-4 pb-3">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 dark:text-slate-400">search</span>
+<input class="form-input w-full rounded-full border-0 bg-slate-200/60 dark:bg-slate-800/60 py-2.5 pl-10 pr-4 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="Search services..." type="text"/>
+</div>
+</div>
+<div class="flex gap-2 px-4 pb-4 overflow-x-auto">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-full bg-slate-200/60 dark:bg-slate-800/60 px-3">
+<p class="text-sm font-medium text-slate-700 dark:text-slate-300">Location</p>
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400" style="font-size: 20px;">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-full bg-slate-200/60 dark:bg-slate-800/60 px-3">
+<p class="text-sm font-medium text-slate-700 dark:text-slate-300">Rating</p>
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400" style="font-size: 20px;">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-full bg-slate-200/60 dark:bg-slate-800/60 px-3">
+<p class="text-sm font-medium text-slate-700 dark:text-slate-300">Price Range</p>
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400" style="font-size: 20px;">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-full bg-slate-200/60 dark:bg-slate-800/60 px-3">
+<p class="text-sm font-medium text-slate-700 dark:text-slate-300">Availability</p>
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400" style="font-size: 20px;">expand_more</span>
+</button>
+</div>
+<div class="flex px-4 pb-4">
+<div class="flex h-11 w-full items-center justify-center rounded-full bg-slate-200/60 dark:bg-slate-800/60 p-1">
+<label class="flex h-full flex-1 cursor-pointer items-center justify-center rounded-full has-[:checked]:bg-primary has-[:checked]:text-white text-sm font-medium text-slate-700 dark:text-slate-300 has-[:checked]:dark:text-white">
+<span>List</span>
+<input checked="" class="invisible w-0" name="view-toggle" type="radio" value="List"/>
+</label>
+<label class="flex h-full flex-1 cursor-pointer items-center justify-center rounded-full has-[:checked]:bg-primary has-[:checked]:text-white text-sm font-medium text-slate-700 dark:text-slate-300 has-[:checked]:dark:text-white">
+<span>Map</span>
+<input class="invisible w-0" name="view-toggle" type="radio" value="Map"/>
+</label>
+</div>
+</div>
+</header>
+<main class="space-y-2 p-4 pt-0">
+<div class="flex items-center gap-4 rounded-lg bg-white dark:bg-slate-800/50 p-3 shadow-sm">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsyCjpVYq6E_q-gj6Xv33WDUIVR-NLdExTo2RSsU1Lqov3LQMDc5CsmAq65wU-9SlFre1C5DE-YvAQRr0mPQlehuKSTmWUAnyqVxqaAlVgMvCJO9hZ1mLajCHiX9f4lLCVay3tkoxG8uQLLC54O_GpwWZZlnol2_TRbSc1Bh32rhQo5CDOjkYFN8JJE-YsDRXwsnj7HZHzOwEFuH6dsjJmaIhEMLFjyiMpc7Zfop6mVdyi6_x3tlZ1UcAhVNHW8_ppZ-bAuZ_Ntxdb");'></div>
+<div class="flex-1">
+<p class="text-base font-bold text-slate-900 dark:text-white">Expert Plumbing Solutions</p>
+<div class="flex items-center gap-1 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-yellow-500" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8 (123 reviews)</span>
+</div>
+</div>
+<div class="shrink-0"><p class="text-base font-semibold text-slate-900 dark:text-white">$50/hr</p></div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-white dark:bg-slate-800/50 p-3 shadow-sm">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADcy-vG5s2HX1qKA5P4xHb5TjJZzUj5F4bRk6trXFrzYnaCFobf_PvcwENkeaL8V1Rh3mrjb8YF2aOkXOMAExxCJjJJYInexlu-54R6XjXRAxvZeDitkdzwguBJDJV-g77Ue0aEAr3rgnR6Mvj7MrbJwqbDm7XhYFYxuRAyyoBjS69fYXadnnkGHMtVIoKU0xsFaa5gLYSiMKuXGrAwvxxNiXifKneTbhz-gxMyVWc3oqRxeh6TSkk7GT7dL67GWSd7W4d8VIVmbtY");'></div>
+<div class="flex-1">
+<p class="text-base font-bold text-slate-900 dark:text-white">Reliable Plumbing Services</p>
+<div class="flex items-center gap-1 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-yellow-500" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+<span>4.5 (87 reviews)</span>
+</div>
+</div>
+<div class="shrink-0"><p class="text-base font-semibold text-slate-900 dark:text-white">$45/hr</p></div>
+</div>
+<div class="flex items-center gap-4 rounded-lg bg-white dark:bg-slate-800/50 p-3 shadow-sm">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDb4gY1bCNdO5uE0y3nEodcUX-IDuFf_kUs6swV4dLxCjnavEWSTRQM14iQiIDLOfCmUTsn6NaSWQ_kQUE2AxP-zU-POmpi93oTO_QAPQrkOPshAGnG1BblXR7KUTMVpj94AQ7Or94JbErgFkv8k1Wa3ovbb4T4ZlfB-Kt42zJ42F39e7mPaUyv5A4kCcgViV0fKdveeurpN9toIB4PU3S689diBD_AJThdqX7EyyJIb_axJFO88CTjVS6-ZmAkBfqm_eQJLXoI6qFj");'></div>
+<div class="flex-1">
+<p class="text-base font-bold text-slate-900 dark:text-white">Quick Fix Plumbing</p>
+<div class="flex items-center gap-1 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-yellow-500" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+<span>4.2 (56 reviews)</span>
+</div>
+</div>
+<div class="shrink-0"><p class="text-base font-semibold text-slate-900 dark:text-white">$40/hr</p></div>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 z-10 border-t border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm pb-4 pt-2">
+<div class="flex justify-around">
+<a class="flex flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-xs font-medium">Home</p>
+</a>
+<a class="flex flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
+<p class="text-xs font-medium">Search</p>
+</a>
+<a class="flex flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<p class="text-xs font-medium">Bookings</p>
+</a>
+<a class="flex flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-xs font-medium">Profile</p>
+</a>
+</div>
+</footer>
+</div>
+
+</body></html>

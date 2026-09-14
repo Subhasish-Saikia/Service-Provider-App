@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Stitch Design</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13a4ec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Manrope"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div>
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-gray-200 dark:border-gray-800">
+<h1 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Home</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-transparent text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32Zm88-29.84q.06-2.16 0-4.32l14.92-18.64a8 8 0 0 0 1.48-7.06a107.21 107.21 0 0 0-10.88-26.25a8 8 0 0 0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186 40.54a8 8 0 0 0-3.94-6a107.71 107.71 0 0 0-26.25-10.87a8 8 0 0 0-7.06 1.49L130.16 40Q128 40 125.84 40L107.2 25.11a8 8 0 0 0-7.06-1.48A107.6 107.6 0 0 0 73.89 34.51a8 8 0 0 0-3.93 6L67.32 64.27q-1.56 1.49-3 3L40.54 70a8 8 0 0 0-6 3.94a107.71 107.71 0 0 0-10.87 26.25a8 8 0 0 0 1.49 7.06L40 125.84Q40 128 40 130.16L25.11 148.8a8 8 0 0 0-1.48 7.06a107.21 107.21 0 0 0 10.88 26.25a8 8 0 0 0 6 3.93l23.72 2.64q1.49 1.56 3 3L70 215.46a8 8 0 0 0 3.94 6a107.71 107.71 0 0 0 26.25 10.87a8 8 0 0 0 7.06-1.49L125.84 216q2.16.06 4.32 0l18.64 14.92a8 8 0 0 0 7.06 1.48a107.21 107.21 0 0 0 26.25-10.88a8 8 0 0 0 3.93-6l2.64-23.72q1.56-1.48 3-3L215.46 186a8 8 0 0 0 6-3.94a107.71 107.71 0 0 0 10.87-26.25a8 8 0 0 0-1.49-7.06Zm-16.1-6.5a73.93 73.93 0 0 1 0 8.68a8 8 0 0 0 1.74 5.48l14.19 17.73a91.57 91.57 0 0 1-6.23 15l-22.58-2.51a8 8 0 0 0-5.1 2.64a74.11 74.11 0 0 1-6.14 6.14a8 8 0 0 0-2.64 5.1l-2.51 22.58a91.32 91.32 0 0 1-15 6.23l-17.74-14.19a8 8 0 0 0-5-1.75h-.48a73.93 73.93 0 0 1-8.68 0a8 8 0 0 0-5.48 1.74L100.45 215.8a91.57 91.57 0 0 1-15-6.23L82.89 187a8 8 0 0 0-2.64-5.1a74.11 74.11 0 0 1-6.14-6.14a8 8 0 0 0-5.1-2.64L46.43 170.6a91.32 91.32 0 0 1-6.23-15l14.19-17.74a8 8 0 0 0 1.74-5.48a73.93 73.93 0 0 1 0-8.68a8 8 0 0 0-1.74-5.48L40.2 100.45a91.57 91.57 0 0 1 6.23-15L69 82.89a8 8 0 0 0 5.1-2.64a74.11 74.11 0 0 1 6.14-6.14A8 8 0 0 0 82.89 69L85.4 46.43a91.32 91.32 0 0 1 15-6.23l17.74 14.19a8 8 0 0 0 5.48 1.74a73.93 73.93 0 0 1 8.68 0a8 8 0 0 0 5.48-1.74L155.55 40.2a91.57 91.57 0 0 1 15 6.23L173.11 69a8 8 0 0 0 2.64 5.1a74.11 74.11 0 0 1 6.14 6.14a8 8 0 0 0 5.1 2.64l22.58 2.51a91.32 91.32 0 0 1 6.23 15l-14.19 17.74a8 8 0 0 0-1.74 5.48Z"></path>
+</svg>
+</button>
+</div>
+</header>
+<main class="p-4">
+<div class="relative flex min-h-[480px] flex-col items-center justify-center gap-6 rounded-lg bg-cover bg-center bg-no-repeat p-4" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtR2WnvCNN4mr20LMS3qJFN_D2Pz4RNpCNEnKpH3ZaUDLzcRKc4d6JNfiJwl5iiIKM54N1GHXsl0MFVvoSmayuwbVm-BnJrm532wzGwwStjDysapLtoJuEtcqtcEgoFa1bpPt_2xJSXysDlpuniN-KjfRcmlUg8GvqTbT3Qc8V2XNapaGXhJ-XrG9YRregSuLsrWVvMZDJjGI8WhEjlhJQFmRIfwDRTLCgeJssTLZFbLOE2qyJuAmabfyac3cs17zYqmRszC0hkzFq");'>
+<div class="flex flex-col gap-2 text-center">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl">Find local services</h1>
+<p class="text-white text-sm font-normal leading-normal md:text-base">Book trusted professionals for home repairs, personal care, and more.</p>
+</div>
+<form class="flex w-full max-w-lg rounded-lg bg-white dark:bg-background-dark shadow-lg">
+<div class="flex items-center pl-4 text-gray-500 dark:text-gray-400">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66 218.34l-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32ZM40 112a72 72 0 1 1 72 72A72.08 72.08 0 0 1 40 112Z"></path>
+</svg>
+</div>
+<input class="w-full flex-1 appearance-none border-none bg-transparent py-3 pl-2 pr-4 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-0" placeholder="Search for services" type="text" value=""/>
+<button class="m-1 flex-shrink-0 rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white">Search</button>
+</form>
+</div>
+<section class="py-6">
+<h2 class="text-gray-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] mb-4">Popular Services</h2>
+<div class="flex space-x-4 overflow-x-auto pb-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex-shrink-0 w-40 space-y-2">
+<div class="w-full h-40 bg-cover bg-center rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-EbcKW1_6LLNtI9eYTfL7Ez86mZuD53E0O1yyUEp4lHNF1ASAee7n9kDgaUIXo_AnCF-NDnHN46dVb9xMEJh4trANY0SyctlWpBHsesQfgFlelykZtyXyxoCjecbwTjMxMT7GzZOjjRN792ZauxGJ5X5jXspFYTpUFeZKuutkoOv8crX-gzNPjVDRD7AuMGwL0eCnkahNikGngErO1TdOdJVbdVbJOhWobIUKtMaL3BWelwdz4U82fJYW8FA0rKbEJg6D7Oqi9QmI');"></div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal text-center">Home Cleaning</p>
+</div>
+<div class="flex-shrink-0 w-40 space-y-2">
+<div class="w-full h-40 bg-cover bg-center rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5N_60UK-9Su_RJoTdmRLpMgjzkImml9vGbzFTUFzhiIcb-c6d78-IR1t58UZLn2TzaG1yQ5dhUOJSlfgbCyJ7IuELgLg82ponB4fAzWE47B-rVx8wCULbQYGQbG0jO19xLq_9p1p35awJAjsefJ_FhmDdMhYn-rQT97AbICF7KTHt6Cpvmvn8y29cNykxPenOWJ-y0SpxqkCx4vLxm93yYpjSBN-lcbby8NIyc5VrgW2ayGRp-pnjzIwFad3BlFOKCey_xPNPsxkw');"></div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal text-center">Dog Walking</p>
+</div>
+<div class="flex-shrink-0 w-40 space-y-2">
+<div class="w-full h-40 bg-cover bg-center rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbEyuHTL5Qov8hsFYwCQKCluUIs91TY9afDBII9P-AdurTGQCgBCilg3ToFfzgcCyJd7wHvj_qAdMBMCTg7JzTgiZI63--hsZImH8Knm5jm_aYdtFAE8Ff78cRvDTbdy2H0_P3mrfnrCwrj9wmabC5mzy1yNUS2cFe7PRCArPOi7wp7J96NHeTSOSLVL84iN113wl-onn39CQeogezu4Fs-oafKlvmY6ZusOL1aec-8otiemJvSTSlIvmpH3VAfQ4IPW-qQ4exm7ah');"></div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal text-center">Plumbing</p>
+</div>
+<div class="flex-shrink-0 w-40 space-y-2">
+<div class="w-full h-40 bg-cover bg-center rounded-lg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFzIxbgPV764rvRMdneD9DWPPZ7i3U6Acfaq1gG8QXQRuiUZHkE5bV0oovqSRhoK5baIzEkltYHupxnNdbDC3m_91pQQJwBK4uLg9zvGUWc-BXHXx_thbAcNMb3QA-RHJbsNUIS0Ft57x-1242jMmzt5D3VyS5_7vA6UxJVbxQzCpsJp2_nSf5uyWnEAx7GxB0NKIJccNlyXK7Pr5PAJzSO3NBrIzekQ0I_QA3GbOKT5wQhiPOMJ_ide2mDghoCjQS9BvseKTz-jvc');"></div>
+<p class="text-gray-900 dark:text-white text-base font-medium leading-normal text-center">Hair Stylist</p>
+</div>
+</div>
+</section>
+<section class="py-6">
+<h2 class="text-gray-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] mb-4">Quick Actions</h2>
+<div class="flex gap-4">
+<button class="flex-1 rounded-lg bg-primary py-3 text-sm font-bold text-white">Book Now</button>
+<button class="flex-1 rounded-lg bg-primary/20 dark:bg-primary/30 py-3 text-sm font-bold text-primary">Join as Provider</button>
+</div>
+</section>
+<section class="py-6">
+<h2 class="text-gray-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] mb-4">How It Works</h2>
+<div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+<div class="flex flex-col items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark p-4">
+<div class="text-primary">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66 218.34l-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32ZM40 112a72 72 0 1 1 72 72A72.08 72.08 0 0 1 40 112Z"></path>
+</svg>
+</div>
+<h3 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Search</h3>
+</div>
+<div class="flex flex-col items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark p-4">
+<div class="text-primary">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M208 32H184V24a8 8 0 0 0-16 0v8H88V24a8 8 0 0 0-16 0v8H48A16 16 0 0 0 32 48v160a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16Zm-8 160H56V96h144v96Zm0-112H56V48h16v8a8 8 0 0 0 16 0V48h80v8a8 8 0 0 0 16 0V48h16Z"></path>
+</svg>
+</div>
+<h3 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Book</h3>
+</div>
+<div class="flex flex-col items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark p-4">
+<div class="text-primary">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224 48H32A16 16 0 0 0 16 64v128a16 16 0 0 0 16 16h192a16 16 0 0 0 16-16V64a16 16 0 0 0-16-16Zm0 16v24H32V64ZM32 192V104h192v88Z"></path>
+</svg>
+</div>
+<h3 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Pay</h3>
+</div>
+<div class="flex flex-col items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark p-4">
+<div class="text-primary">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M239.2 97.29a16 16 0 0 0-13.81-11L166 81.17 142.72 25.81a16 16 0 0 0-29.44 0L90.07 81.17 30.61 86.32a16 16 0 0 0-9.11 28.06L66.61 153.8l-13.52 58.54a16 16 0 0 0 23.84 17.34l51.07-31 51.07 31a16 16 0 0 0 23.84-17.34l-13.52-58.54 45.1-39.36a16 16 0 0 0 4.7-15.71Zm-15.22 5L178.88 141.6a16 16 0 0 0-5.08 15.71l13.52 58.54-51.07-31a16 16 0 0 0-16.54 0l-51.07 31 13.52-58.54a16 16 0 0 0-5.08-15.71L32 102.29l59.44-5.14a16 16 0 0 0 13.35-9.75L128 32.08l23.2 55.32a16 16 0 0 0 13.35 9.75l59.45 5.14Z"></path>
+</svg>
+</div>
+<h3 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Review</h3>
+</div>
+</div>
+</section>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 pb-5">
+<nav class="flex justify-around pt-2">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224 115.55V208a16 16 0 0 1-16 16H168a16 16 0 0 1-16-16v-40a8 8 0 0 0-8-8h-16a8 8 0 0 0-8 8v40a16 16 0 0 1-16 16H48a16 16 0 0 1-16-16V115.55a16 16 0 0 1 5.17-11.78l80-75.48a16 16 0 0 1 21.66 0l80 75.48A16 16 0 0 1 224 115.55Z"></path>
+</svg>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Home</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66 218.34l-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32ZM40 112a72 72 0 1 1 72 72A72.08 72.08 0 0 1 40 112Z"></path>
+</svg>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Search</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M208 32H184V24a8 8 0 0 0-16 0v8H88V24a8 8 0 0 0-16 0v8H48A16 16 0 0 0 32 48v160a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16Zm-8 160H56V96h144v96Zm0-112H56V48h16v8a8 8 0 0 0 16 0V48h80v8a8 8 0 0 0 16 0V48h16Z"></path>
+</svg>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Bookings</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M230.92 212c-15.23-26.33-38.7-45.21-66.09-54.16a72 72 0 1 0-73.66 0C63.78 166.78 40.31 185.66 25.08 212a8 8 0 1 0 13.85 8c18.84-32.56 52.14-52 89.07-52s70.23 19.44 89.07 52a8 8 0 1 0 13.85-8ZM72 96a56 56 0 1 1 56 56A56.06 56.06 0 0 1 72 96Z"></path>
+</svg>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Profile</p>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>
